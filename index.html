@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/logo-cuervos.png">
+  <meta name="description" content="Resultados y estadísticas históricas de Cuervos FC.">
+  <meta name="theme-color" content="#090b10">
+  <title>Cuervos FC · Estadísticas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Cuervos FC, ir al inicio">
+      <span class="crest" aria-hidden="true"><img src="assets/logo-cuervos.png" alt=""></span>
+      <span><strong>Cuervos FC</strong><small>Estadísticas del equipo</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button>
+    <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
+      <a href="#temporada">Temporada</a>
+      <a href="#jugadores">Jugadores</a>
+      <a href="#historia">Historia</a>
+      <a href="#resultados">Resultados</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="league-lockup">
+          <span class="league-logo"><img src="assets/logo-liga-delago.png" alt="Logo de la liga Delago"></span>
+          <p class="eyebrow">Liga Master · <span id="current-season-label">Temporada actual</span></p>
+        </div>
+        <h1 id="hero-title">Los números<br><em>de la parvada.</em></h1>
+        <p class="hero-intro">Resultados, líderes y trayectoria de Cuervos FC, reunidos en un solo lugar.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#temporada">Ver temporada</a>
+          <a class="button button-ghost" href="#historia">Explorar historia</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <img class="hero-crest" src="assets/logo-cuervos.png" alt="Escudo oficial de Cuervos FC">
+        <div class="latest-card" id="latest-match" aria-live="polite">
+          <span class="skeleton">Cargando último resultado…</span>
+        </div>
+        <div class="next-card" id="next-match" aria-live="polite">
+          <span class="skeleton">Cargando próximo partido…</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="temporada" class="section section-current" aria-labelledby="season-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Pulso actual</p>
+          <h2 id="season-title">Clausura 2026</h2>
+        </div>
+        <p class="updated" id="updated-at"></p>
+      </div>
+      <div class="metric-grid" id="season-metrics"></div>
+      <div class="record-bar" id="record-bar" aria-label="Distribución de resultados"></div>
+    </section>
+
+    <section id="jugadores" class="section" aria-labelledby="players-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Rendimiento individual</p>
+          <h2 id="players-title">Jugadores de la temporada</h2>
+        </div>
+        <span class="section-tag">Goles + asistencias</span>
+      </div>
+      <div class="leaders-layout">
+        <article class="leader-feature" id="top-scorer"></article>
+        <div class="table-card">
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr><th>Jugador</th><th>PJ</th><th>G</th><th>A</th><th>G+A</th></tr>
+              </thead>
+              <tbody id="current-player-rows"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia" class="section section-dark" aria-labelledby="history-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Desde 2025</p>
+          <h2 id="history-title">Historia del equipo</h2>
+        </div>
+        <div class="segmented" role="group" aria-label="Ordenar líderes históricos">
+          <button class="segment active" type="button" data-ranking="goals">Goles</button>
+          <button class="segment" type="button" data-ranking="assists">Asistencias</button>
+        </div>
+      </div>
+      <div class="history-layout">
+        <div class="ranking-card">
+          <p class="card-kicker">Líderes históricos</p>
+          <ol class="ranking-list" id="all-time-ranking"></ol>
+        </div>
+        <div class="season-history" id="season-history"></div>
+      </div>
+    </section>
+
+    <section id="resultados" class="section" aria-labelledby="results-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Partido por partido</p>
+          <h2 id="results-title">Resultados</h2>
+        </div>
+        <label class="select-wrap">
+          <span>Temporada</span>
+          <select id="season-filter" aria-label="Filtrar resultados por temporada"></select>
+        </label>
+      </div>
+      <div class="results-list" id="results-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">CUERVOS <span>FC</span></div>
+    <p>Estadísticas construidas con los registros del equipo.</p>
+    <p id="footer-update"></p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
