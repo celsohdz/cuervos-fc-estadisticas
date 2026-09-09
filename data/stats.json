@@ -16,6 +16,7 @@
     "playerGoals": 6,
     "assists": 2,
     "yellowCards": null,
+    "redCards": null,
     "finish": "En curso"
   },
   "currentPlayers": [
@@ -178,6 +179,7 @@
       "playerGoals": 47,
       "assists": 14,
       "yellowCards": 9,
+      "redCards": 0,
       "finish": "Semifinal Copa"
     },
     {
@@ -194,6 +196,7 @@
       "playerGoals": 46,
       "assists": 30,
       "yellowCards": 4,
+      "redCards": 0,
       "finish": "Repechaje Copa"
     },
     {
@@ -210,6 +213,7 @@
       "playerGoals": 53,
       "assists": 38,
       "yellowCards": 2,
+      "redCards": 0,
       "finish": "Semifinal Liga"
     },
     {
@@ -226,6 +230,7 @@
       "playerGoals": 6,
       "assists": 2,
       "yellowCards": null,
+      "redCards": null,
       "finish": "En curso"
     }
   ],
