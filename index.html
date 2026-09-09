@@ -67,7 +67,7 @@
           <p class="eyebrow">Rendimiento individual</p>
           <h2 id="players-title">Jugadores de la temporada</h2>
         </div>
-        <span class="section-tag">Goles + asistencias</span>
+        <span class="section-tag">Goles · asistencias · tarjetas</span>
       </div>
       <div class="leaders-layout">
         <article class="leader-feature" id="top-scorer"></article>
@@ -75,7 +75,11 @@
           <div class="table-scroll">
             <table>
               <thead>
-                <tr><th>Jugador</th><th>PJ</th><th>G</th><th>A</th><th>G+A</th></tr>
+                <tr>
+                  <th>Jugador</th><th>PJ</th><th>G</th><th>A</th><th>G+A</th>
+                  <th><span class="card-icon card-yellow" aria-hidden="true"></span><span class="sr-only">Tarjetas amarillas</span>TA</th>
+                  <th><span class="card-icon card-red" aria-hidden="true"></span><span class="sr-only">Tarjetas rojas</span>TR</th>
+                </tr>
               </thead>
               <tbody id="current-player-rows"></tbody>
             </table>
@@ -93,6 +97,8 @@
         <div class="segmented" role="group" aria-label="Ordenar líderes históricos">
           <button class="segment active" type="button" data-ranking="goals">Goles</button>
           <button class="segment" type="button" data-ranking="assists">Asistencias</button>
+          <button class="segment" type="button" data-ranking="yellowCards">Amarillas</button>
+          <button class="segment" type="button" data-ranking="redCards">Rojas</button>
         </div>
       </div>
       <div class="history-layout">

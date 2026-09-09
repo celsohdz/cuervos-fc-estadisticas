@@ -54,6 +54,8 @@ function renderSeason(data) {
     ["Perdidos", item.lost],
     ["GF / GC", `${item.gf} / ${item.ga}`],
     ["Diferencia", signed(item.gd)],
+    ["T. amarillas", safeNumber(item.yellowCards)],
+    ["T. rojas", safeNumber(item.redCards)],
   ];
   document.querySelector("#season-metrics").innerHTML = metrics.map(([label, value]) =>
     `<div class="metric"><strong>${value}</strong><span>${label}</span></div>`
@@ -84,13 +86,21 @@ function renderPlayers(data) {
       <td><strong>${player.goals}</strong></td>
       <td>${player.assists}</td>
       <td>${player.goals + player.assists}</td>
+      <td class="discipline-cell"><span class="card-icon card-yellow" aria-hidden="true"></span>${safeNumber(player.yellowCards)}</td>
+      <td class="discipline-cell"><span class="card-icon card-red" aria-hidden="true"></span>${safeNumber(player.redCards)}</td>
     </tr>
   `).join("");
 }
 
 function renderRanking(data) {
   const metric = state.ranking;
-  const label = metric === "goals" ? "goles" : "asistencias";
+  const labels = {
+    goals: "goles",
+    assists: "asistencias",
+    yellowCards: "amarillas",
+    redCards: "rojas",
+  };
+  const label = labels[metric];
   const ranked = [...data.allTimePlayers]
     .sort((a, b) => b[metric] - a[metric] || b.played - a.played || a.player.localeCompare(b.player, "es"))
     .slice(0, 8);
@@ -108,6 +118,10 @@ function renderHistory(data) {
       <div>
         <h3>${season.season}</h3>
         <p>${season.finish} · ${season.gf} GF / ${season.ga} GC</p>
+        <p class="season-discipline">
+          <span><i class="card-icon card-yellow" aria-hidden="true"></i>${safeNumber(season.yellowCards)} TA</span>
+          <span><i class="card-icon card-red" aria-hidden="true"></i>${safeNumber(season.redCards)} TR</span>
+        </p>
       </div>
       <div class="season-record">
         <strong>${season.won}–${season.drawn}–${season.lost}</strong>
