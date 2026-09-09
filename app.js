@@ -85,7 +85,6 @@ function renderPlayers(data) {
       <td>${player.played}</td>
       <td><strong>${player.goals}</strong></td>
       <td>${player.assists}</td>
-      <td>${player.goals + player.assists}</td>
       <td class="discipline-cell"><span class="card-icon card-yellow" aria-hidden="true"></span>${safeNumber(player.yellowCards)}</td>
       <td class="discipline-cell"><span class="card-icon card-red" aria-hidden="true"></span>${safeNumber(player.redCards)}</td>
     </tr>
