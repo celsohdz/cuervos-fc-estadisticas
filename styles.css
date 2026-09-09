@@ -150,7 +150,7 @@ button, select { font: inherit; }
 .button-ghost { border: 1px solid #454b56; color: #e4e6ea; }
 .button-ghost:hover { border-color: #777e8b; }
 
-.latest-card, .next-card {
+.latest-card, .next-card, .rescheduled-card {
   width: 100%;
   max-width: 430px;
   padding: 30px;
@@ -175,6 +175,14 @@ button, select { font: inherit; }
 .grill-duty { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.13); }
 .grill-duty span { color: #aeb3bd; font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .grill-duty strong { color: white; font-size: .92rem; }
+.rescheduled-card { padding: 22px 28px; background: rgba(204,130,18,.12); border-color: rgba(240,178,76,.38); }
+.rescheduled-label { display: flex; justify-content: space-between; gap: 16px; color: #f2be68; font-size: .7rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.rescheduled-rival { margin-top: 15px; font-size: 1.18rem; font-weight: 900; letter-spacing: -.025em; text-transform: uppercase; }
+.rescheduled-rival span { margin-right: 4px; font-size: .95rem; }
+.rescheduled-meta { margin: 7px 0 15px; color: #d2d4d9; font-size: .82rem; text-transform: capitalize; }
+.bar-duty { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.13); }
+.bar-duty span { color: #c5a87b; font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.bar-duty strong { color: white; font-size: .9rem; }
 
 .section { padding: clamp(72px, 9vw, 120px) clamp(20px, 7vw, 110px); }
 .section-current { background: #fff; }
@@ -278,7 +286,7 @@ footer { display: flex; justify-content: space-between; align-items: center; gap
 @media (max-width: 960px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-side { justify-items: start; max-width: 620px; }
-  .latest-card, .next-card { max-width: 620px; }
+  .latest-card, .next-card, .rescheduled-card { max-width: 620px; }
   .metric-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .metric:nth-child(4n) { border-right: 0; }
   .metric:nth-child(-n+4) { border-bottom: 1px solid var(--line); }

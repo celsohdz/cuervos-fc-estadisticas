@@ -43,6 +43,20 @@ function renderHero(data) {
     <p class="next-meta">${formatDate(next.date, { weekday: "long" })} · ${next.time} h</p>
     <div class="grill-duty"><span>Asador</span><strong>${next.asador}</strong></div>
   `;
+
+  const rescheduled = data.rescheduledMatch;
+  const rescheduledCard = document.querySelector("#rescheduled-match");
+  if (!rescheduled) {
+    rescheduledCard.hidden = true;
+    return;
+  }
+  rescheduledCard.hidden = false;
+  rescheduledCard.innerHTML = `
+    <div class="rescheduled-label"><span>Reprogramado por lluvia</span><span>J${rescheduled.matchday}</span></div>
+    <div class="rescheduled-rival"><span aria-hidden="true">⚽</span> J${rescheduled.matchday} · vs ${rescheduled.rival}</div>
+    <p class="rescheduled-meta">${formatDate(rescheduled.date, { weekday: "long" })} · ${rescheduled.time} h</p>
+    <div class="bar-duty"><span>Servicio</span><strong>${rescheduled.service} · Sin asador</strong></div>
+  `;
 }
 
 function renderSeason(data) {
