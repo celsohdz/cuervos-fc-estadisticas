@@ -164,6 +164,15 @@
     "condition": "Local",
     "asador": "Julio / Julio Jr"
   },
+  "rescheduledMatch": {
+    "matchday": 3,
+    "date": "2026-10-14",
+    "time": "22:00",
+    "rival": "Gunners",
+    "status": "Reprogramado por lluvia",
+    "service": "BAR",
+    "asador": null
+  },
   "seasons": [
     {
       "season": "Apertura 2025",
