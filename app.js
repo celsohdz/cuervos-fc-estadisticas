@@ -12,6 +12,63 @@ const formatDate = (date, options = {}) =>
 const safeNumber = (value) => value ?? "—";
 const signed = (value) => (value > 0 ? `+${value}` : String(value));
 
+function monterreyWallTime(now = new Date()) {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Monterrey",
+    year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", hourCycle: "h23",
+  }).formatToParts(now).map((part) => [part.type, part.value]));
+  return Date.UTC(+parts.year, +parts.month - 1, +parts.day, +parts.hour, +parts.minute);
+}
+
+function fixtureEndTime(fixture) {
+  const [year, month, day] = fixture.date.split("-").map(Number);
+  const [hour, minute] = fixture.time.split(":").map(Number);
+  return Date.UTC(year, month - 1, day, hour, minute) + 60 * 60 * 1000;
+}
+
+function getNextMatch(data, now = new Date()) {
+  if (!Array.isArray(data.fixtures)) return data.nextMatch;
+  const finished = new Set(data.matches
+    .filter((match) => match.season === data.currentSeason)
+    .map((match) => `${match.date}|${match.rival}`));
+  const currentTime = monterreyWallTime(now);
+  return [...data.fixtures]
+    .filter((fixture) => !finished.has(`${fixture.date}|${fixture.rival}`) && fixtureEndTime(fixture) > currentTime)
+    .sort((a, b) => fixtureEndTime(a) - fixtureEndTime(b))[0] ?? null;
+}
+
+function renderUpcoming(data) {
+  const next = getNextMatch(data);
+  const nextCard = document.querySelector("#next-match");
+  if (!next) {
+    nextCard.innerHTML = '<p class="empty-state">Próximo partido por confirmar.</p>';
+  } else {
+    nextCard.innerHTML = `
+      <div class="next-label"><span>Próximo partido</span><span>J${next.matchday}</span></div>
+      <div class="next-rival"><span aria-hidden="true">⚽</span> J${next.matchday} · vs ${next.rival}</div>
+      <p class="next-meta">${formatDate(next.date, { weekday: "long" })} · ${next.time} h</p>
+      <div class="grill-duty"><span>${next.service ? "Servicio" : "Asador"}</span><strong>${next.service ? `${next.service} · Sin asador` : next.asador}</strong></div>
+    `;
+  }
+
+  const rescheduled = data.rescheduledMatch;
+  const rescheduledCard = document.querySelector("#rescheduled-match");
+  if (!rescheduled || next?.matchday === rescheduled.matchday ||
+      data.matches.some((match) => match.season === data.currentSeason && match.date === rescheduled.date && match.rival === rescheduled.rival) ||
+      fixtureEndTime(rescheduled) <= monterreyWallTime()) {
+    rescheduledCard.hidden = true;
+    return;
+  }
+  rescheduledCard.hidden = false;
+  rescheduledCard.innerHTML = `
+    <div class="rescheduled-label"><span>Reprogramado por lluvia</span><span>J${rescheduled.matchday}</span></div>
+    <div class="rescheduled-rival"><span aria-hidden="true">⚽</span> J${rescheduled.matchday} · vs ${rescheduled.rival}</div>
+    <p class="rescheduled-meta">${formatDate(rescheduled.date, { weekday: "long" })} · ${rescheduled.time} h</p>
+    <div class="bar-duty"><span>Servicio</span><strong>${rescheduled.service} · Sin asador</strong></div>
+  `;
+}
+
 function renderHero(data) {
   document.querySelector("#current-season-label").textContent = data.currentSeason;
   document.querySelector("#season-title").textContent = data.currentSeason;
@@ -31,32 +88,7 @@ function renderHero(data) {
     <p class="latest-meta">${match.phase} · ${match.time} h</p>
   `;
 
-  const next = data.nextMatch;
-  const nextCard = document.querySelector("#next-match");
-  if (!next) {
-    nextCard.innerHTML = '<p class="empty-state">Próximo partido por confirmar.</p>';
-    return;
-  }
-  nextCard.innerHTML = `
-    <div class="next-label"><span>Próximo partido</span><span>J${next.matchday}</span></div>
-    <div class="next-rival"><span aria-hidden="true">⚽</span> J${next.matchday} · vs ${next.rival}</div>
-    <p class="next-meta">${formatDate(next.date, { weekday: "long" })} · ${next.time} h</p>
-    <div class="grill-duty"><span>Asador</span><strong>${next.asador}</strong></div>
-  `;
-
-  const rescheduled = data.rescheduledMatch;
-  const rescheduledCard = document.querySelector("#rescheduled-match");
-  if (!rescheduled) {
-    rescheduledCard.hidden = true;
-    return;
-  }
-  rescheduledCard.hidden = false;
-  rescheduledCard.innerHTML = `
-    <div class="rescheduled-label"><span>Reprogramado por lluvia</span><span>J${rescheduled.matchday}</span></div>
-    <div class="rescheduled-rival"><span aria-hidden="true">⚽</span> J${rescheduled.matchday} · vs ${rescheduled.rival}</div>
-    <p class="rescheduled-meta">${formatDate(rescheduled.date, { weekday: "long" })} · ${rescheduled.time} h</p>
-    <div class="bar-duty"><span>Servicio</span><strong>${rescheduled.service} · Sin asador</strong></div>
-  `;
+  renderUpcoming(data);
 }
 
 function renderSeason(data) {
@@ -201,6 +233,7 @@ async function init() {
     const data = await response.json();
     state.data = data;
     renderHero(data);
+    setInterval(() => renderUpcoming(data), 60_000);
     renderSeason(data);
     renderPlayers(data);
     renderRanking(data);
