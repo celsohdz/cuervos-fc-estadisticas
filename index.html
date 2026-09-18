@@ -18,6 +18,7 @@
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button>
     <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
       <a href="#temporada">Temporada</a>
+      <a href="#tabla-general">Tabla general</a>
       <a href="#jugadores">Jugadores</a>
       <a href="#historia">Historia</a>
       <a href="#resultados">Resultados</a>
@@ -62,6 +63,34 @@
       </div>
       <div class="metric-grid" id="season-metrics"></div>
       <div class="record-bar" id="record-bar" aria-label="Distribución de resultados"></div>
+    </section>
+
+    <section id="tabla-general" class="section section-standings" aria-labelledby="standings-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Liga Master · fase regular</p>
+          <h2 id="standings-title">Tabla general</h2>
+        </div>
+        <p class="updated" id="standings-updated"></p>
+      </div>
+      <div class="standings-card">
+        <div class="standings-scroll" role="region" aria-label="Tabla general del Clausura 2026; desliza para ver todas las estadísticas" tabindex="0">
+          <table class="standings-table">
+            <caption>Clasificación de Liga Master Clausura 2026</caption>
+            <thead>
+              <tr>
+                <th scope="col">Equipo</th><th scope="col" title="Partidos jugados">PJ</th>
+                <th scope="col" title="Ganados">G</th><th scope="col" title="Empatados">E</th>
+                <th scope="col" title="Perdidos">P</th><th scope="col" title="Puntos">Pts</th>
+                <th scope="col" title="Diferencia de goles">Dif</th><th scope="col" title="Goles a favor">GF</th>
+                <th scope="col" title="Goles en contra">GC</th><th scope="col" title="FP, según la tabla de la liga">FP</th>
+              </tr>
+            </thead>
+            <tbody id="standings-rows"></tbody>
+          </table>
+        </div>
+      </div>
+      <p class="standings-note">Datos de la tabla de la liga proporcionada por el equipo. Corte: 18 de septiembre de 2026; no se actualiza en vivo. <span class="standings-swipe">Desliza la tabla para ver todas las columnas.</span></p>
     </section>
 
     <section id="jugadores" class="section" aria-labelledby="players-title">

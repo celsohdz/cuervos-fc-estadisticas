@@ -115,6 +115,24 @@ function renderSeason(data) {
   `;
 }
 
+function renderStandings(data) {
+  const standings = data.standings;
+  if (!standings?.rows?.length) {
+    document.querySelector("#standings-rows").innerHTML = '<tr><td colspan="10">Tabla por confirmar.</td></tr>';
+    return;
+  }
+  document.querySelector("#standings-updated").textContent = `Corte: ${formatDate(standings.asOf)}`;
+  document.querySelector(".standings-table caption").textContent = `Clasificación de Liga Master ${data.currentSeason}`;
+  document.querySelector("#standings-rows").innerHTML = standings.rows.map((row) => `
+    <tr class="${row.team === "Cuervos" ? "standings-cuervos" : ""}">
+      <th scope="row"><span class="standings-rank">${row.rank}</span><span class="standings-team">${row.team}</span></th>
+      <td>${row.played}</td><td>${row.won}</td><td>${row.drawn}</td><td>${row.lost}</td>
+      <td class="standings-points">${row.points}</td><td>${row.gd}</td>
+      <td>${row.gf}</td><td>${row.ga}</td><td>${row.fp}</td>
+    </tr>
+  `).join("");
+}
+
 function renderPlayers(data) {
   const players = data.currentPlayers;
   const top = players[0];
@@ -235,6 +253,7 @@ async function init() {
     renderHero(data);
     setInterval(() => renderUpcoming(data), 60_000);
     renderSeason(data);
+    renderStandings(data);
     renderPlayers(data);
     renderRanking(data);
     renderHistory(data);
