@@ -223,9 +223,11 @@ button, select { font: inherit; }
 .standings-table tbody tr.standings-cuervos td, .standings-table tbody tr.standings-cuervos th:first-child,
 .standings-table tbody tr.standings-cuervos:hover td, .standings-table tbody tr.standings-cuervos:hover th:first-child { background: #fff0f1; }
 .standings-table .standings-cuervos th:first-child { box-shadow: inset 4px 0 0 var(--red), 9px 0 12px -12px rgba(9,11,16,.5); }
-.standings-rank { display: inline-grid; place-items: center; width: 30px; height: 30px; margin-right: 12px; color: var(--white); background: var(--night-2); border-radius: 8px; font-size: .75rem; font-weight: 900; }
+.standings-identity { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.standings-rank { display: inline-grid; flex: 0 0 30px; place-items: center; width: 30px; height: 30px; color: var(--white); background: var(--night-2); border-radius: 8px; font-size: .75rem; font-weight: 900; }
 .standings-cuervos .standings-rank { background: var(--red); }
-.standings-team { font-weight: 850; }
+.standings-logo { display: block; flex: 0 0 30px; width: 30px; height: 30px; object-fit: contain; }
+.standings-team { min-width: 0; font-weight: 850; line-height: 1.2; }
 .standings-points { font-weight: 900; }
 .standings-note { margin: 14px 0 0; color: var(--muted); font-size: .76rem; line-height: 1.5; }
 .standings-swipe { display: none; }
@@ -348,8 +350,10 @@ footer { display: flex; justify-content: space-between; align-items: center; gap
   th:first-child, td:first-child { min-width: 158px; }
   .standings-table { min-width: 830px; }
   .standings-table th, .standings-table td { padding: 13px 10px; }
-  .standings-table th:first-child { width: 170px; }
-  .standings-rank { width: 26px; height: 26px; margin-right: 7px; }
+  .standings-table th:first-child { width: 185px; }
+  .standings-identity { gap: 6px; }
+  .standings-rank { flex-basis: 26px; width: 26px; height: 26px; }
+  .standings-logo { flex-basis: 26px; width: 26px; height: 26px; }
   .standings-team { font-size: .74rem; }
   .standings-swipe { display: inline; }
   .result-row { grid-template-columns: 72px 1fr auto 1fr 36px; gap: 8px; padding: 15px 12px; }

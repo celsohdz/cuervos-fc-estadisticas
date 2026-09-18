@@ -11,6 +11,21 @@ const formatDate = (date, options = {}) =>
 
 const safeNumber = (value) => value ?? "—";
 const signed = (value) => (value > 0 ? `+${value}` : String(value));
+const teamLogos = {
+  "Piratas": "piratas.png",
+  "Brodys FC": "brodys-fc.jpg",
+  "Compadres": "compadres.jpg",
+  "Caras Sucias": "caras-sucias.png",
+  "Cuervos": "cuervos.jpg",
+  "Forza": "forza.jpg",
+  "Boca Jr": "boca-jr.png",
+  "La Grilla": "la-grilla.jpg",
+  "Roma": "roma.png",
+  "Gunners": "gunners.png",
+  "Capos": "capos.png",
+  "Chamucos": "chamucos.jpg",
+  "Regios": "regios.png",
+};
 
 function monterreyWallTime(now = new Date()) {
   const parts = Object.fromEntries(new Intl.DateTimeFormat("en-US", {
@@ -125,7 +140,7 @@ function renderStandings(data) {
   document.querySelector(".standings-table caption").textContent = `Clasificación de Liga Master ${data.currentSeason}`;
   document.querySelector("#standings-rows").innerHTML = standings.rows.map((row) => `
     <tr class="${row.team === "Cuervos" ? "standings-cuervos" : ""}">
-      <th scope="row"><span class="standings-rank">${row.rank}</span><span class="standings-team">${row.team}</span></th>
+      <th scope="row"><span class="standings-identity"><span class="standings-rank">${row.rank}</span><img class="standings-logo" src="assets/team-logos/${teamLogos[row.team]}" alt="" width="30" height="30" loading="lazy"><span class="standings-team">${row.team}</span></span></th>
       <td>${row.played}</td><td>${row.won}</td><td>${row.drawn}</td><td>${row.lost}</td>
       <td class="standings-points">${row.points}</td><td>${row.gd}</td>
       <td>${row.gf}</td><td>${row.ga}</td><td>${row.fp}</td>
