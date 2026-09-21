@@ -332,6 +332,8 @@ tbody tr:hover { background: #f7f6f2; }
 tbody tr:hover td:first-child { background: #f7f6f2; }
 .discipline-cell { font-weight: 800; }
 .card-icon { display: inline-block; width: .62em; height: .88em; margin-right: .38em; border-radius: 1px; vertical-align: -.06em; box-shadow: 0 0 0 1px rgba(0,0,0,.08); }
+.player-name { vertical-align: middle; }
+.position-badge { display: inline-flex; align-items: center; margin-left: .55rem; padding: .24rem .48rem; color: #fff; background: #101622; border-radius: 999px; font-size: .62rem; font-weight: 850; letter-spacing: .06em; line-height: 1; text-transform: uppercase; vertical-align: middle; }
 .card-yellow { background: #f2cf17; }
 .card-red { background: #d7263d; }
 

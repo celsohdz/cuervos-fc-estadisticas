@@ -212,7 +212,7 @@ function renderPlayers(data) {
 
   document.querySelector("#current-player-rows").innerHTML = players.map((player) => `
     <tr>
-      <td>${player.player}</td>
+      <td><span class="player-name">${player.player}</span>${player.position === "Portero" ? '<span class="position-badge">Portero</span>' : ""}</td>
       <td>${player.played}</td>
       <td><strong>${player.goals}</strong></td>
       <td>${player.assists}</td>
