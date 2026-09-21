@@ -18,6 +18,7 @@
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button>
     <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
       <a href="#temporada">Temporada</a>
+      <a href="#rol-juegos">Rol de juegos</a>
       <a href="#tabla-general">Tabla general</a>
       <a href="#jugadores">Jugadores</a>
       <a href="#historia">Historia</a>
@@ -47,9 +48,6 @@
         <div class="next-card" id="next-match" aria-live="polite">
           <span class="skeleton">Cargando próximo partido…</span>
         </div>
-        <div class="rescheduled-card" id="rescheduled-match" aria-live="polite">
-          <span class="skeleton">Cargando partido reprogramado…</span>
-        </div>
       </div>
     </section>
 
@@ -63,6 +61,18 @@
       </div>
       <div class="metric-grid" id="season-metrics"></div>
       <div class="record-bar" id="record-bar" aria-label="Distribución de resultados"></div>
+    </section>
+
+    <section id="rol-juegos" class="section section-schedule" aria-labelledby="schedule-title">
+      <div class="section-heading schedule-heading">
+        <div>
+          <p class="eyebrow">Clausura 2026 · fase regular</p>
+          <h2 id="schedule-title">Rol de juegos</h2>
+        </div>
+        <span class="section-tag">Club de Lago</span>
+      </div>
+      <div id="schedule-feature" class="schedule-feature" aria-live="polite"></div>
+      <div class="schedule-list" id="schedule-list"></div>
     </section>
 
     <section id="tabla-general" class="section section-standings" aria-labelledby="standings-title">

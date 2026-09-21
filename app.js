@@ -66,22 +66,6 @@ function renderUpcoming(data) {
       <div class="grill-duty"><span>${next.service ? "Servicio" : "Asador"}</span><strong>${next.service ? `${next.service} · Sin asador` : next.asador}</strong></div>
     `;
   }
-
-  const rescheduled = data.rescheduledMatch;
-  const rescheduledCard = document.querySelector("#rescheduled-match");
-  if (!rescheduled || next?.matchday === rescheduled.matchday ||
-      data.matches.some((match) => match.season === data.currentSeason && match.date === rescheduled.date && match.rival === rescheduled.rival) ||
-      fixtureEndTime(rescheduled) <= monterreyWallTime()) {
-    rescheduledCard.hidden = true;
-    return;
-  }
-  rescheduledCard.hidden = false;
-  rescheduledCard.innerHTML = `
-    <div class="rescheduled-label"><span>Reprogramado por lluvia</span><span>J${rescheduled.matchday}</span></div>
-    <div class="rescheduled-rival"><span aria-hidden="true">⚽</span> J${rescheduled.matchday} · vs ${rescheduled.rival}</div>
-    <p class="rescheduled-meta">${formatDate(rescheduled.date, { weekday: "long" })} · ${rescheduled.time} h</p>
-    <div class="bar-duty"><span>Servicio</span><strong>${rescheduled.service} · Sin asador</strong></div>
-  `;
 }
 
 function renderHero(data) {
@@ -146,6 +130,74 @@ function renderStandings(data) {
       <td>${row.gf}</td><td>${row.ga}</td><td>${row.fp}</td>
     </tr>
   `).join("");
+}
+
+function matchForFixture(data, fixture) {
+  return data.matches.find((match) =>
+    match.season === data.currentSeason &&
+    match.date === fixture.date &&
+    match.rival.toLowerCase() === fixture.rival.toLowerCase()
+  );
+}
+
+function renderSchedule(data) {
+  const feature = document.querySelector("#schedule-feature");
+  const list = document.querySelector("#schedule-list");
+  const next = getNextMatch(data);
+
+  if (!next) {
+    feature.innerHTML = '<p class="empty-state">Próximo partido por confirmar.</p>';
+  } else {
+    const logo = teamLogos[next.rival];
+    feature.innerHTML = `
+      <div class="schedule-feature-copy">
+        <div class="schedule-feature-label"><span>Próximo partido</span><strong>J${next.matchday}</strong></div>
+        <h3>Cuervos <span>vs</span> ${next.rival}</h3>
+        <p>${formatDate(next.date, { weekday: "long" })} · ${next.time} h</p>
+        <div class="schedule-feature-duty">
+          <span>${next.service ? "🍺 Servicio" : "🔥 Asador"}</span>
+          <strong>${next.service ? `${next.service} · Sin asador` : next.asador}</strong>
+        </div>
+      </div>
+      <div class="schedule-versus" aria-hidden="true">
+        <img src="assets/logo-cuervos.png" alt="">
+        <span>VS</span>
+        ${logo ? `<img src="assets/team-logos/${logo}" alt="">` : '<span class="schedule-fallback">⚽</span>'}
+      </div>
+    `;
+  }
+
+  list.innerHTML = [...data.fixtures]
+    .sort((a, b) => a.date.localeCompare(b.date) || a.time.localeCompare(b.time))
+    .map((fixture) => {
+      const match = matchForFixture(data, fixture);
+      const isNext = next && fixture.matchday === next.matchday && fixture.date === next.date;
+      const isRescheduled = fixture.matchday === data.rescheduledMatch?.matchday && fixture.date === data.rescheduledMatch?.date;
+      const logo = teamLogos[fixture.rival];
+      const status = match ? "Final" : isRescheduled ? "Reprogramado" : isNext ? "Siguiente" : "Programado";
+      return `
+        <article class="schedule-game ${match ? "is-finished" : ""} ${isNext ? "is-next" : ""}">
+          <div class="schedule-round">
+            <span>Jornada</span><strong>${fixture.matchday}</strong>
+          </div>
+          <div class="schedule-opponent">
+            ${logo ? `<img src="assets/team-logos/${logo}" alt="">` : '<span class="schedule-mini-fallback">⚽</span>'}
+            <div><small>vs</small><strong>${fixture.rival}</strong></div>
+          </div>
+          <div class="schedule-when">
+            <time datetime="${fixture.date}T${fixture.time}">${formatDate(fixture.date, { weekday: "short", year: undefined })}</time>
+            <span>${fixture.time} h</span>
+          </div>
+          <div class="schedule-duty">
+            <span>${fixture.service ? "🍺 Servicio" : "🔥 Asador"}</span>
+            <strong>${fixture.service ? `${fixture.service} · Sin asador` : fixture.asador}</strong>
+          </div>
+          <div class="schedule-status status-${status.toLowerCase()}">
+            ${match ? `<strong>${match.gf}–${match.ga}</strong><span>${status}</span>` : `<span>${status}</span>`}
+          </div>
+        </article>
+      `;
+    }).join("");
 }
 
 function renderPlayers(data) {
@@ -268,6 +320,7 @@ async function init() {
     renderHero(data);
     setInterval(() => renderUpcoming(data), 60_000);
     renderSeason(data);
+    renderSchedule(data);
     renderStandings(data);
     renderPlayers(data);
     renderRanking(data);
