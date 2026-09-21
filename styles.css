@@ -68,6 +68,20 @@ button, select { font: inherit; }
 }
 .site-nav a:hover { color: var(--white); }
 .nav-toggle { display: none; color: white; background: none; border: 1px solid #464b55; border-radius: 999px; padding: 8px 13px; }
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  color: #e9ebee;
+  border: 1px solid #464b55;
+  border-radius: 999px;
+  font-size: .76rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+.back-home:hover { color: #fff; border-color: #777e8b; }
 
 .hero {
   position: relative;
@@ -381,6 +395,7 @@ footer { display: flex; justify-content: space-between; align-items: center; gap
 @media (max-width: 700px) {
   .site-header { min-height: 68px; }
   .nav-toggle { display: inline-flex; }
+  .back-home { min-height: 34px; padding: 0 11px; font-size: .7rem; }
   .site-nav {
     position: absolute;
     top: 68px;
