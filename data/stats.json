@@ -123,7 +123,7 @@
     {
       "season": "Clausura 2026",
       "player": "Celso Hernández",
-      "played": 2,
+      "played": 3,
       "goals": 0,
       "assists": 0,
       "yellowCards": null,
@@ -199,6 +199,7 @@
       "Julio Jáuregui Jr",
       "Christian Carreño",
       "Juan Carlos de la Garza",
+      "Celso Hernández",
       "Alejandro Hernández",
       "Leopoldo Hinojosa",
       "Julio Jáuregui",
@@ -397,7 +398,7 @@
     {
       "player": "Celso Hernández",
       "seasons": 4,
-      "played": 28,
+      "played": 29,
       "goals": 13,
       "assists": 11,
       "yellowCards": 2,
@@ -1977,6 +1978,7 @@
         "Julio Jáuregui Jr",
         "Christian Carreño",
         "Juan Carlos de la Garza",
+        "Celso Hernández",
         "Alejandro Hernández",
         "Leopoldo Hinojosa",
         "Julio Jáuregui",
