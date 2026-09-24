@@ -7,7 +7,7 @@
   <meta name="description" content="Resultados y estadísticas históricas de Cuervos FC.">
   <meta name="theme-color" content="#090b10">
   <title>Cuervos FC · Estadísticas</title>
-  <link rel="stylesheet" href="styles.css?v=20260920-3">
+  <link rel="stylesheet" href="styles.css?v=20260923-preview">
 </head>
 <body>
   <header class="site-header">
@@ -22,6 +22,7 @@
       <a href="#jugadores">Jugadores</a>
       <a href="#historia">Historia</a>
       <a href="#resultados">Resultados</a>
+      <a href="#videos">Videos</a>
     </nav>
     <div class="header-actions">
       <a class="back-home" href="index.html" aria-label="Regresar a la selección de equipos">← Inicio</a>
@@ -103,7 +104,7 @@
           </table>
         </div>
       </div>
-      <p class="standings-note">Datos oficiales de CopaFácil. Corte: 23 de septiembre de 2026; no se actualiza en vivo. <span class="standings-swipe">Desliza la tabla para ver todas las columnas.</span></p>
+      <p class="standings-note">Corte: 23 de septiembre de 2026; no se actualiza en vivo. <span class="standings-swipe">Desliza la tabla para ver todas las columnas.</span></p>
     </section>
 
     <section id="jugadores" class="section" aria-labelledby="players-title">
@@ -168,6 +169,32 @@
       </div>
       <div class="results-list" id="results-list"></div>
     </section>
+
+    <section id="videos" class="section section-videos" aria-labelledby="videos-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Canal @TvCuervosFC</p>
+          <h2 id="videos-title">Videos</h2>
+        </div>
+        <span class="section-tag">Próximamente</span>
+      </div>
+      <div class="playlist-showcase">
+        <article class="playlist-panel">
+          <div class="playlist-player playlist-empty" data-playlist="PLBeEicVfh2jo" aria-label="Playlist Goles y jugadas, próximamente">
+            <div class="playlist-placeholder"><span class="playlist-play" aria-hidden="true"></span><strong>Próximamente</strong><small>Los videos aparecerán aquí</small></div>
+            <div class="playlist-embed" aria-hidden="true"></div>
+          </div>
+          <div class="playlist-copy"><span>Playlist</span><h3>Goles y jugadas</h3><p>Los mejores momentos de Cuervos FC estarán disponibles aquí.</p></div>
+        </article>
+        <article class="playlist-panel">
+          <div class="playlist-player playlist-empty" data-playlist="PLKeGcTfNb5Og" aria-label="Playlist Partidos, próximamente">
+            <div class="playlist-placeholder"><span class="playlist-play" aria-hidden="true"></span><strong>Próximamente</strong><small>Los videos aparecerán aquí</small></div>
+            <div class="playlist-embed" aria-hidden="true"></div>
+          </div>
+          <div class="playlist-copy"><span>Playlist</span><h3>Partidos</h3><p>Los partidos completos de Cuervos FC estarán disponibles aquí.</p></div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -176,6 +203,7 @@
     <p id="footer-update"></p>
   </footer>
 
+  <script src="youtube-playlists.js?v=20260924-1" defer></script>
   <script src="app.js?v=20260920-3" defer></script>
 </body>
 </html>
