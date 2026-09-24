@@ -1,18 +1,18 @@
 {
   "team": "Cuervos FC",
   "currentSeason": "Clausura 2026",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-23",
   "standings": {
-    "asOf": "2026-09-22",
+    "asOf": "2026-09-23",
     "phase": "Fase regular",
     "rows": [
-      {"rank": 1, "team": "Brodys FC", "played": 4, "won": 4, "drawn": 0, "lost": 0, "points": 12, "gd": 22, "gf": 28, "ga": 6, "fp": 0},
+      {"rank": 1, "team": "Brodys FC", "played": 5, "won": 5, "drawn": 0, "lost": 0, "points": 15, "gd": 31, "gf": 42, "ga": 11, "fp": 5},
       {"rank": 2, "team": "Piratas", "played": 4, "won": 4, "drawn": 0, "lost": 0, "points": 12, "gd": 17, "gf": 27, "ga": 10, "fp": 0},
       {"rank": 3, "team": "Forza", "played": 4, "won": 3, "drawn": 0, "lost": 1, "points": 9, "gd": 12, "gf": 26, "ga": 14, "fp": 15},
       {"rank": 4, "team": "Cuervos", "played": 3, "won": 3, "drawn": 0, "lost": 0, "points": 9, "gd": 9, "gf": 18, "ga": 9, "fp": 5},
       {"rank": 5, "team": "Compadres", "played": 4, "won": 3, "drawn": 0, "lost": 1, "points": 9, "gd": 0, "gf": 10, "ga": 10, "fp": 0},
       {"rank": 6, "team": "Caras Sucias", "played": 3, "won": 2, "drawn": 0, "lost": 1, "points": 6, "gd": 8, "gf": 12, "ga": 4, "fp": 10},
-      {"rank": 7, "team": "Boca Jr", "played": 4, "won": 2, "drawn": 0, "lost": 2, "points": 6, "gd": 2, "gf": 15, "ga": 13, "fp": 10},
+      {"rank": 7, "team": "Boca Jr", "played": 5, "won": 2, "drawn": 0, "lost": 3, "points": 6, "gd": -7, "gf": 20, "ga": 27, "fp": 10},
       {"rank": 8, "team": "Roma", "played": 3, "won": 1, "drawn": 0, "lost": 2, "points": 3, "gd": -7, "gf": 6, "ga": 13, "fp": 0},
       {"rank": 9, "team": "La Grilla", "played": 5, "won": 1, "drawn": 0, "lost": 4, "points": 3, "gd": -7, "gf": 10, "ga": 17, "fp": 15},
       {"rank": 10, "team": "Gunners", "played": 3, "won": 1, "drawn": 0, "lost": 2, "points": 3, "gd": -11, "gf": 7, "ga": 18, "fp": 5},
