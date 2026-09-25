@@ -344,6 +344,7 @@ tbody tr:hover td:first-child { background: #f7f6f2; }
 .section-videos .eyebrow { color: #ec7183; }
 .section-videos .section-tag { color: #d4d7dd; border-color: rgba(255,255,255,.18); }
 .playlist-showcase { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.playlist-showcase-single { grid-template-columns: minmax(0, 1fr); max-width: 900px; }
 .playlist-panel { overflow: hidden; background: #171b23; border: 1px solid rgba(255,255,255,.1); border-radius: 24px; }
 .playlist-player { aspect-ratio: 16 / 9; background: #050609; }
 .playlist-player iframe { display: block; width: 100%; height: 100%; border: 0; }
