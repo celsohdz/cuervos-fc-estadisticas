@@ -22,11 +22,11 @@ function updateNextJuniorMatch(now = new Date()) {
   const cards = [...document.querySelectorAll(".jr-match-card[data-date]")];
   const currentTime = monterreyWallTime(now);
   const next = cards
-    .filter((card) => !card.dataset.result && matchEndTime(card) > currentTime)
+    .filter((card) => !card.dataset.result && !card.dataset.postponed && matchEndTime(card) > currentTime)
     .sort((a, b) => matchEndTime(a) - matchEndTime(b))[0] ?? null;
 
   cards.forEach((card) => {
-    if (card.dataset.result) return;
+    if (card.dataset.result || card.dataset.postponed) return;
     const isNext = card === next;
     card.classList.toggle("is-next", isNext);
     const status = card.querySelector(".jr-match-meta b");

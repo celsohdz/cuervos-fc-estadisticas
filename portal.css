@@ -309,6 +309,8 @@ a { color: inherit; }
 .jr-matches-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
 .jr-match-card { padding: 22px; background: #1b202a; border: 1px solid rgba(255,255,255,.09); border-radius: 20px; }
 .jr-match-card.is-next { background: rgba(227,173,71,.09); border-color: rgba(227,173,71,.72); }
+.jr-match-card.is-postponed { background: rgba(239,119,137,.08); border-color: rgba(239,119,137,.5); }
+.jr-match-card.is-postponed .jr-match-meta b { color: #ef7789; }
 .jr-match-card.is-result { background: #171b23; }
 .jr-match-meta { display: flex; justify-content: space-between; gap: 16px; color: #aeb3bd; font-size: .7rem; }
 .jr-match-meta b { color: #e0b75f; font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; }
