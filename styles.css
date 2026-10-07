@@ -183,6 +183,18 @@ button, select { font: inherit; }
 .latest-meta { margin: 0; color: #b6bac3; font-size: .88rem; }
 .next-card { padding: 24px 28px; background: rgba(255,255,255,.1); }
 .next-label { display: flex; justify-content: space-between; gap: 16px; color: #f0b6bf; font-size: .7rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.upcoming-list { display: grid; gap: 0; margin-top: 15px; }
+.upcoming-game { padding: 17px 0 2px; border-top: 1px solid rgba(255,255,255,.13); }
+.upcoming-game:first-child { padding-top: 0; border-top: 0; }
+.upcoming-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #aeb3bd; font-size: .62rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.upcoming-heading strong { color: white; }
+.upcoming-game.is-rescheduled .upcoming-heading span { color: #f2be68; }
+.upcoming-rival { margin-top: 8px; font-size: 1.04rem; font-weight: 900; letter-spacing: -.025em; text-transform: uppercase; }
+.upcoming-rival span { margin-right: 3px; font-size: .82rem; }
+.upcoming-meta { margin: 5px 0 10px; color: #b6bac3; font-size: .76rem; text-transform: capitalize; }
+.upcoming-duty { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.upcoming-duty span { color: #aeb3bd; font-size: .62rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.upcoming-duty strong { color: white; font-size: .82rem; }
 .next-rival { margin-top: 17px; font-size: 1.32rem; font-weight: 900; letter-spacing: -.025em; text-transform: uppercase; }
 .next-rival span { margin-right: 4px; font-size: 1rem; }
 .next-meta { margin: 8px 0 18px; color: #b6bac3; font-size: .84rem; text-transform: capitalize; }
@@ -443,6 +455,10 @@ footer { display: flex; justify-content: space-between; align-items: center; gap
   .league-logo { width: 68px; height: 50px; }
   .hero-side { justify-items: center; }
   .hero-crest { width: 140px; border-radius: 24px; }
+  .next-card.has-multiple { padding: 22px 20px; }
+  .next-card.has-multiple .next-label { font-size: .64rem; }
+  .upcoming-rival { font-size: .96rem; }
+  .upcoming-meta { font-size: .72rem; }
   .section-heading { align-items: flex-start; flex-direction: column; }
   .segmented { border-radius: 16px; }
   .segment { flex: 1 1 auto; }

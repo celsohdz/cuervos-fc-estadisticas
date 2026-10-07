@@ -53,17 +53,53 @@ function getNextMatch(data, now = new Date()) {
     .sort((a, b) => fixtureEndTime(a) - fixtureEndTime(b))[0] ?? null;
 }
 
+function getUpcomingWeekMatches(data, now = new Date()) {
+  if (!Array.isArray(data.fixtures)) return data.nextMatch ? [data.nextMatch] : [];
+  const finished = new Set(data.matches
+    .filter((match) => match.season === data.currentSeason)
+    .map((match) => `${match.date}|${match.rival}`));
+  const currentTime = monterreyWallTime(now);
+  const upcoming = [...data.fixtures]
+    .filter((fixture) => !finished.has(`${fixture.date}|${fixture.rival}`) && fixtureEndTime(fixture) > currentTime)
+    .sort((a, b) => fixtureEndTime(a) - fixtureEndTime(b));
+
+  if (!upcoming.length) return [];
+  const [year, month, day] = upcoming[0].date.split("-").map(Number);
+  const firstDate = new Date(Date.UTC(year, month - 1, day));
+  const mondayOffset = (firstDate.getUTCDay() + 6) % 7;
+  const weekStart = Date.UTC(year, month - 1, day - mondayOffset);
+  const weekEnd = weekStart + 7 * 24 * 60 * 60 * 1000;
+
+  return upcoming.filter((fixture) => {
+    const [fixtureYear, fixtureMonth, fixtureDay] = fixture.date.split("-").map(Number);
+    const fixtureDate = Date.UTC(fixtureYear, fixtureMonth - 1, fixtureDay);
+    return fixtureDate >= weekStart && fixtureDate < weekEnd;
+  });
+}
+
 function renderUpcoming(data) {
-  const next = getNextMatch(data);
+  const upcoming = getUpcomingWeekMatches(data);
   const nextCard = document.querySelector("#next-match");
-  if (!next) {
+  if (!upcoming.length) {
     nextCard.innerHTML = '<p class="empty-state">Próximo partido por confirmar.</p>';
   } else {
+    const multiple = upcoming.length > 1;
+    nextCard.classList.toggle("has-multiple", multiple);
     nextCard.innerHTML = `
-      <div class="next-label"><span>Próximo partido</span><span>J${next.matchday}</span></div>
-      <div class="next-rival"><span aria-hidden="true">⚽</span> J${next.matchday} · vs ${next.rival}</div>
-      <p class="next-meta">${formatDate(next.date, { weekday: "long" })} · ${next.time} h</p>
-      <div class="grill-duty"><span>${next.service ? "Servicio" : "Asador"}</span><strong>${next.service ? `${next.service} · Sin asador` : next.asador}</strong></div>
+      <div class="next-label"><span>${multiple ? "Próximos partidos" : "Próximo partido"}</span><span>${multiple ? `${upcoming.length} juegos` : `J${upcoming[0].matchday}`}</span></div>
+      <div class="upcoming-list">
+        ${upcoming.map((match) => {
+          const isRescheduled = match.matchday === data.rescheduledMatch?.matchday && match.date === data.rescheduledMatch?.date;
+          return `
+            <article class="upcoming-game ${isRescheduled ? "is-rescheduled" : ""}">
+              <div class="upcoming-heading"><span>${isRescheduled ? "Reprogramado" : "Partido"}</span><strong>J${match.matchday}</strong></div>
+              <div class="upcoming-rival"><span aria-hidden="true">⚽</span> Cuervos vs ${match.rival}</div>
+              <p class="upcoming-meta">${formatDate(match.date, { weekday: "long" })} · ${match.time} h</p>
+              ${match.asador ? `<div class="upcoming-duty"><span>Asador</span><strong>${match.asador}</strong></div>` : ""}
+            </article>
+          `;
+        }).join("")}
+      </div>
     `;
   }
 }
