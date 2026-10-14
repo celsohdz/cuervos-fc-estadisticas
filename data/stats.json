@@ -51,7 +51,7 @@
     {
       "season": "Clausura 2026",
       "player": "Julio Jáuregui Jr",
-      "played": 6,
+      "played": 5,
       "goals": 4,
       "assists": 7,
       "yellowCards": null,
@@ -169,7 +169,7 @@
     {
       "season": "Clausura 2026",
       "player": "Julio Jáuregui",
-      "played": 4,
+      "played": 5,
       "goals": 0,
       "assists": 0,
       "yellowCards": null,
@@ -196,7 +196,7 @@
     "goalDifference": -2,
     "attendees": [
       "Christian Carreño",
-      "Julio Jáuregui Jr",
+      "Julio Jáuregui",
       "Arturo Valle",
       "Jorge Gómez",
       "Ángel Verde",
@@ -372,7 +372,7 @@
     {
       "player": "Julio Jáuregui Jr",
       "seasons": 2,
-      "played": 16,
+      "played": 15,
       "goals": 17,
       "assists": 26,
       "yellowCards": 0,
@@ -624,7 +624,7 @@
     {
       "player": "Julio Jáuregui",
       "seasons": 2,
-      "played": 9,
+      "played": 10,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
@@ -2109,7 +2109,7 @@
       "goalDifference": -2,
       "attendees": [
         "Christian Carreño",
-        "Julio Jáuregui Jr",
+        "Julio Jáuregui",
         "Arturo Valle",
         "Jorge Gómez",
         "Ángel Verde",
