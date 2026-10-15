@@ -1,21 +1,21 @@
 {
   "team": "Cuervos FC",
   "currentSeason": "Clausura 2026",
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-14",
   "standings": {
-    "asOf": "2026-10-13",
+    "asOf": "2026-10-14",
     "phase": "Fase regular",
     "rows": [
       {"rank": 1, "team": "Caras Sucias", "played": 7, "won": 6, "drawn": 0, "lost": 1, "points": 18, "gd": 37, "gf": 44, "ga": 7, "fp": 25},
       {"rank": 2, "team": "Brodys FC", "played": 8, "won": 6, "drawn": 0, "lost": 2, "points": 18, "gd": 26, "gf": 55, "ga": 29, "fp": 15},
       {"rank": 3, "team": "Piratas", "played": 7, "won": 6, "drawn": 0, "lost": 1, "points": 18, "gd": 22, "gf": 42, "ga": 20, "fp": 35},
       {"rank": 4, "team": "Forza", "played": 7, "won": 4, "drawn": 1, "lost": 2, "points": 13, "gd": 11, "gf": 40, "ga": 29, "fp": 25},
-      {"rank": 5, "team": "Cuervos", "played": 6, "won": 4, "drawn": 0, "lost": 2, "points": 12, "gd": 5, "gf": 27, "ga": 22, "fp": 5},
+      {"rank": 5, "team": "Cuervos", "played": 7, "won": 4, "drawn": 0, "lost": 3, "points": 12, "gd": 4, "gf": 31, "ga": 27, "fp": 15},
       {"rank": 6, "team": "Roma", "played": 7, "won": 4, "drawn": 0, "lost": 3, "points": 12, "gd": -7, "gf": 21, "ga": 28, "fp": 0},
       {"rank": 7, "team": "La Grilla", "played": 8, "won": 3, "drawn": 1, "lost": 4, "points": 10, "gd": 0, "gf": 25, "ga": 25, "fp": 15},
       {"rank": 8, "team": "Boca Jr", "played": 7, "won": 3, "drawn": 0, "lost": 4, "points": 9, "gd": -3, "gf": 31, "ga": 34, "fp": 25},
-      {"rank": 9, "team": "Compadres", "played": 7, "won": 3, "drawn": 0, "lost": 4, "points": 9, "gd": -20, "gf": 15, "ga": 35, "fp": 0},
-      {"rank": 10, "team": "Gunners", "played": 4, "won": 2, "drawn": 0, "lost": 2, "points": 6, "gd": -8, "gf": 10, "ga": 18, "fp": 10},
+      {"rank": 9, "team": "Gunners", "played": 5, "won": 3, "drawn": 0, "lost": 2, "points": 9, "gd": -7, "gf": 15, "ga": 22, "fp": 10},
+      {"rank": 10, "team": "Compadres", "played": 7, "won": 3, "drawn": 0, "lost": 4, "points": 9, "gd": -20, "gf": 15, "ga": 35, "fp": 0},
       {"rank": 11, "team": "Capos", "played": 7, "won": 1, "drawn": 0, "lost": 6, "points": 3, "gd": -13, "gf": 20, "ga": 33, "fp": 25},
       {"rank": 12, "team": "Chamucos", "played": 4, "won": 0, "drawn": 0, "lost": 4, "points": 0, "gd": -21, "gf": 7, "ga": 28, "fp": 0},
       {"rank": 13, "team": "Regios", "played": 7, "won": 0, "drawn": 0, "lost": 7, "points": 0, "gd": -29, "gf": 10, "ga": 39, "fp": 10}
@@ -23,18 +23,18 @@
   },
   "current": {
     "season": "Clausura 2026",
-    "played": 6,
+    "played": 7,
     "won": 4,
     "drawn": 0,
-    "lost": 2,
-    "gf": 27,
-    "ga": 22,
-    "gd": 5,
-    "goalsPerGame": 4.5,
-    "concededPerGame": 3.6666666666666665,
-    "playerGoals": 27,
+    "lost": 3,
+    "gf": 31,
+    "ga": 27,
+    "gd": 4,
+    "goalsPerGame": 4.428571428571429,
+    "concededPerGame": 3.857142857142857,
+    "playerGoals": 31,
     "assists": 18,
-    "yellowCards": 1,
+    "yellowCards": 3,
     "redCards": null,
     "finish": "En curso"
   },
@@ -51,8 +51,8 @@
     {
       "season": "Clausura 2026",
       "player": "Julio Jáuregui Jr",
-      "played": 5,
-      "goals": 4,
+      "played": 6,
+      "goals": 5,
       "assists": 7,
       "yellowCards": null,
       "redCards": null
@@ -60,8 +60,8 @@
     {
       "season": "Clausura 2026",
       "player": "Juan Carlos de la Garza",
-      "played": 4,
-      "goals": 3,
+      "played": 5,
+      "goals": 5,
       "assists": 3,
       "yellowCards": null,
       "redCards": null
@@ -87,8 +87,8 @@
     {
       "season": "Clausura 2026",
       "player": "Arturo Valle",
-      "played": 5,
-      "goals": 0,
+      "played": 6,
+      "goals": 1,
       "assists": 3,
       "yellowCards": null,
       "redCards": null
@@ -96,15 +96,6 @@
     {
       "season": "Clausura 2026",
       "player": "Edson Arredondo",
-      "played": 5,
-      "goals": 0,
-      "assists": 1,
-      "yellowCards": null,
-      "redCards": null
-    },
-    {
-      "season": "Clausura 2026",
-      "player": "Emiliano Mercado",
       "played": 6,
       "goals": 0,
       "assists": 1,
@@ -113,8 +104,17 @@
     },
     {
       "season": "Clausura 2026",
+      "player": "Emiliano Mercado",
+      "played": 7,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 1,
+      "redCards": null
+    },
+    {
+      "season": "Clausura 2026",
       "player": "Alejandro Hernández",
-      "played": 6,
+      "played": 7,
       "goals": 1,
       "assists": 1,
       "yellowCards": null,
@@ -123,7 +123,7 @@
     {
       "season": "Clausura 2026",
       "player": "Celso Hernández",
-      "played": 6,
+      "played": 7,
       "goals": 0,
       "assists": 0,
       "yellowCards": null,
@@ -132,17 +132,17 @@
     {
       "season": "Clausura 2026",
       "player": "Leopoldo Hinojosa",
-      "played": 6,
+      "played": 7,
       "goals": 0,
       "assists": 0,
-      "yellowCards": null,
+      "yellowCards": 1,
       "redCards": null
     },
     {
       "season": "Clausura 2026",
       "player": "Patricio de la Cruz",
       "position": "Portero",
-      "played": 6,
+      "played": 7,
       "goals": 0,
       "assists": 0,
       "yellowCards": null,
@@ -160,7 +160,7 @@
     {
       "season": "Clausura 2026",
       "player": "Juan Carlos Fernández",
-      "played": 5,
+      "played": 6,
       "goals": 0,
       "assists": 0,
       "yellowCards": null,
@@ -169,7 +169,7 @@
     {
       "season": "Clausura 2026",
       "player": "Julio Jáuregui",
-      "played": 5,
+      "played": 6,
       "goals": 0,
       "assists": 0,
       "yellowCards": null,
@@ -177,75 +177,52 @@
     }
   ],
   "latestMatch": {
-    "id": 73,
+    "id": 74,
     "season": "Clausura 2026",
     "competition": "Liga Master",
     "phase": "Fase regular",
-    "matchday": 8,
-    "date": "2026-10-13",
-    "time": "20:00",
-    "home": "Cuervos",
-    "homeGoals": 3,
-    "awayGoals": 5,
-    "away": "Roma",
-    "condition": "Local",
-    "rival": "Roma",
-    "gf": 3,
+    "matchday": 3,
+    "date": "2026-10-14",
+    "time": "22:00",
+    "home": "Gunners",
+    "homeGoals": 5,
+    "awayGoals": 4,
+    "away": "Cuervos",
+    "condition": "Visitante",
+    "rival": "Gunners",
+    "gf": 4,
     "ga": 5,
     "result": "P",
-    "goalDifference": -2,
+    "goalDifference": -1,
     "attendees": [
-      "Christian Carreño",
-      "Julio Jáuregui",
-      "Arturo Valle",
-      "Jorge Gómez",
-      "Ángel Verde",
-      "Emiliano Mercado",
       "Alejandro Hernández",
+      "Arturo Valle",
       "Celso Hernández",
-      "Leopoldo Hinojosa",
-      "Patricio de la Cruz",
-      "Eduardo Garza",
+      "Edson Arredondo",
+      "Emiliano Mercado",
       "Juan Carlos Fernández",
-      "Juan Carlos de la Garza"
+      "Juan Carlos de la Garza",
+      "Julio Jáuregui",
+      "Julio Jáuregui Jr",
+      "Leopoldo Hinojosa",
+      "Patricio de la Cruz"
     ],
     "goalEvents": [
-      {
-        "goal": 1,
-        "scorer": "Eduardo Garza",
-        "assistant": "Alejandro Hernández"
-      },
-      {
-        "goal": 2,
-        "scorer": "Ángel Verde",
-        "assistant": "Eduardo Garza"
-      },
-      {
-        "goal": 3,
-        "scorer": "Ángel Verde",
-        "assistant": "Juan Carlos de la Garza"
-      }
+      {"goal": 1, "scorer": "Arturo Valle", "assistant": null},
+      {"goal": 2, "scorer": "Juan Carlos de la Garza", "assistant": null},
+      {"goal": 3, "scorer": "Juan Carlos de la Garza", "assistant": null},
+      {"goal": 4, "scorer": "Julio Jáuregui Jr", "assistant": null}
     ],
-    "yellowCards": []
+    "yellowCards": ["Edson Arredondo", "Leopoldo Hinojosa"]
   },
   "nextMatch": {
-    "matchday": 3,
-    "date": "2026-10-14",
-    "time": "22:00",
-    "rival": "Gunners",
-    "status": "Reprogramado por lluvia",
-    "service": "BAR",
-    "asador": null
+    "matchday": 9,
+    "date": "2026-10-20",
+    "time": "21:00",
+    "rival": "Caras Sucias",
+    "asador": "Pato / Emiliano"
   },
-  "rescheduledMatch": {
-    "matchday": 3,
-    "date": "2026-10-14",
-    "time": "22:00",
-    "rival": "Gunners",
-    "status": "Reprogramado por lluvia",
-    "service": "BAR",
-    "asador": null
-  },
+  "rescheduledMatch": null,
   "seasons": [
     {
       "season": "Apertura 2024",
@@ -334,18 +311,18 @@
     },
     {
       "season": "Clausura 2026",
-      "played": 6,
+      "played": 7,
       "won": 4,
       "drawn": 0,
-      "lost": 2,
-      "gf": 27,
-      "ga": 22,
-      "gd": 5,
-      "goalsPerGame": 4.5,
-      "concededPerGame": 3.6666666666666665,
-      "playerGoals": 27,
+      "lost": 3,
+      "gf": 31,
+      "ga": 27,
+      "gd": 4,
+      "goalsPerGame": 4.428571428571429,
+      "concededPerGame": 3.857142857142857,
+      "playerGoals": 31,
       "assists": 18,
-      "yellowCards": 1,
+      "yellowCards": 3,
       "redCards": null,
       "finish": "En curso"
     }
@@ -363,8 +340,8 @@
     {
       "player": "Arturo Valle",
       "seasons": 6,
-      "played": 42,
-      "goals": 35,
+      "played": 43,
+      "goals": 36,
       "assists": 7,
       "yellowCards": 1,
       "redCards": 0
@@ -372,8 +349,8 @@
     {
       "player": "Julio Jáuregui Jr",
       "seasons": 2,
-      "played": 15,
-      "goals": 17,
+      "played": 16,
+      "goals": 18,
       "assists": 26,
       "yellowCards": 0,
       "redCards": 0
@@ -390,7 +367,7 @@
     {
       "player": "Celso Hernández",
       "seasons": 4,
-      "played": 32,
+      "played": 33,
       "goals": 13,
       "assists": 11,
       "yellowCards": 2,
@@ -408,8 +385,8 @@
     {
       "player": "Juan Carlos de la Garza",
       "seasons": 2,
-      "played": 12,
-      "goals": 13,
+      "played": 13,
+      "goals": 15,
       "assists": 8,
       "yellowCards": 0,
       "redCards": 0
@@ -426,7 +403,7 @@
     {
       "player": "Emiliano Mercado",
       "seasons": 4,
-      "played": 31,
+      "played": 32,
       "goals": 10,
       "assists": 2,
       "yellowCards": 1,
@@ -444,7 +421,7 @@
     {
       "player": "Alejandro Hernández",
       "seasons": 3,
-      "played": 21,
+      "played": 22,
       "goals": 8,
       "assists": 5,
       "yellowCards": 1,
@@ -534,16 +511,16 @@
     {
       "player": "Leopoldo Hinojosa",
       "seasons": 6,
-      "played": 41,
+      "played": 42,
       "goals": 1,
       "assists": 2,
-      "yellowCards": 5,
+      "yellowCards": 6,
       "redCards": 0
     },
     {
       "player": "Juan Carlos Fernández",
       "seasons": 2,
-      "played": 11,
+      "played": 12,
       "goals": 1,
       "assists": 2,
       "yellowCards": 1,
@@ -588,7 +565,7 @@
     {
       "player": "Patricio de la Cruz",
       "seasons": 3,
-      "played": 17,
+      "played": 18,
       "goals": 0,
       "assists": 1,
       "yellowCards": 1,
@@ -597,10 +574,10 @@
     {
       "player": "Edson Arredondo",
       "seasons": 2,
-      "played": 10,
+      "played": 11,
       "goals": 0,
       "assists": 1,
-      "yellowCards": 0,
+      "yellowCards": 1,
       "redCards": 0
     },
     {
@@ -624,7 +601,7 @@
     {
       "player": "Julio Jáuregui",
       "seasons": 2,
-      "played": 10,
+      "played": 11,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
@@ -2128,6 +2105,45 @@
         {"goal": 3, "scorer": "Ángel Verde", "assistant": "Juan Carlos de la Garza"}
       ],
       "yellowCards": []
+    },
+    {
+      "id": 74,
+      "season": "Clausura 2026",
+      "competition": "Liga Master",
+      "phase": "Fase regular",
+      "matchday": 3,
+      "date": "2026-10-14",
+      "time": "22:00",
+      "home": "Gunners",
+      "homeGoals": 5,
+      "awayGoals": 4,
+      "away": "Cuervos",
+      "condition": "Visitante",
+      "rival": "Gunners",
+      "gf": 4,
+      "ga": 5,
+      "result": "P",
+      "goalDifference": -1,
+      "attendees": [
+        "Alejandro Hernández",
+        "Arturo Valle",
+        "Celso Hernández",
+        "Edson Arredondo",
+        "Emiliano Mercado",
+        "Juan Carlos Fernández",
+        "Juan Carlos de la Garza",
+        "Julio Jáuregui",
+        "Julio Jáuregui Jr",
+        "Leopoldo Hinojosa",
+        "Patricio de la Cruz"
+      ],
+      "goalEvents": [
+        {"goal": 1, "scorer": "Arturo Valle", "assistant": null},
+        {"goal": 2, "scorer": "Juan Carlos de la Garza", "assistant": null},
+        {"goal": 3, "scorer": "Juan Carlos de la Garza", "assistant": null},
+        {"goal": 4, "scorer": "Julio Jáuregui Jr", "assistant": null}
+      ],
+      "yellowCards": ["Edson Arredondo", "Leopoldo Hinojosa"]
     }
   ],
   "fixtures": [
