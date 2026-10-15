@@ -1,7 +1,7 @@
 {
   "team": "Cuervos FC",
   "currentSeason": "Clausura 2026",
-  "updatedAt": "2026-10-14",
+  "updatedAt": "2026-10-15",
   "standings": {
     "asOf": "2026-10-14",
     "phase": "Fase regular",
@@ -33,7 +33,7 @@
     "goalsPerGame": 4.428571428571429,
     "concededPerGame": 3.857142857142857,
     "playerGoals": 31,
-    "assists": 18,
+    "assists": 21,
     "yellowCards": 3,
     "redCards": null,
     "finish": "En curso"
@@ -98,7 +98,7 @@
       "player": "Edson Arredondo",
       "played": 6,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "yellowCards": 1,
       "redCards": null
     },
@@ -134,7 +134,7 @@
       "player": "Leopoldo Hinojosa",
       "played": 7,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "yellowCards": 1,
       "redCards": null
     },
@@ -144,7 +144,7 @@
       "position": "Portero",
       "played": 7,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "yellowCards": null,
       "redCards": null
     },
@@ -208,10 +208,10 @@
       "Patricio de la Cruz"
     ],
     "goalEvents": [
-      {"goal": 1, "scorer": "Arturo Valle", "assistant": null},
+      {"goal": 1, "scorer": "Julio Jáuregui Jr", "assistant": "Edson Arredondo"},
       {"goal": 2, "scorer": "Juan Carlos de la Garza", "assistant": null},
-      {"goal": 3, "scorer": "Juan Carlos de la Garza", "assistant": null},
-      {"goal": 4, "scorer": "Julio Jáuregui Jr", "assistant": null}
+      {"goal": 3, "scorer": "Juan Carlos de la Garza", "assistant": "Leopoldo Hinojosa"},
+      {"goal": 4, "scorer": "Arturo Valle", "assistant": "Patricio de la Cruz"}
     ],
     "yellowCards": ["Edson Arredondo", "Leopoldo Hinojosa"]
   },
@@ -321,7 +321,7 @@
       "goalsPerGame": 4.428571428571429,
       "concededPerGame": 3.857142857142857,
       "playerGoals": 31,
-      "assists": 18,
+      "assists": 21,
       "yellowCards": 3,
       "redCards": null,
       "finish": "En curso"
@@ -513,7 +513,7 @@
       "seasons": 6,
       "played": 42,
       "goals": 1,
-      "assists": 2,
+      "assists": 3,
       "yellowCards": 6,
       "redCards": 0
     },
@@ -567,7 +567,7 @@
       "seasons": 3,
       "played": 18,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "yellowCards": 1,
       "redCards": 0
     },
@@ -576,7 +576,7 @@
       "seasons": 2,
       "played": 11,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "yellowCards": 1,
       "redCards": 0
     },
@@ -2138,10 +2138,10 @@
         "Patricio de la Cruz"
       ],
       "goalEvents": [
-        {"goal": 1, "scorer": "Arturo Valle", "assistant": null},
+        {"goal": 1, "scorer": "Julio Jáuregui Jr", "assistant": "Edson Arredondo"},
         {"goal": 2, "scorer": "Juan Carlos de la Garza", "assistant": null},
-        {"goal": 3, "scorer": "Juan Carlos de la Garza", "assistant": null},
-        {"goal": 4, "scorer": "Julio Jáuregui Jr", "assistant": null}
+        {"goal": 3, "scorer": "Juan Carlos de la Garza", "assistant": "Leopoldo Hinojosa"},
+        {"goal": 4, "scorer": "Arturo Valle", "assistant": "Patricio de la Cruz"}
       ],
       "yellowCards": ["Edson Arredondo", "Leopoldo Hinojosa"]
     }
