@@ -17,8 +17,8 @@
       {"rank": 9, "team": "Boca Jr", "played": 8, "won": 3, "drawn": 0, "lost": 5, "points": 9, "gd": -4, "gf": 35, "ga": 39, "fp": 25},
       {"rank": 10, "team": "Compadres", "played": 7, "won": 3, "drawn": 0, "lost": 4, "points": 9, "gd": -20, "gf": 15, "ga": 35, "fp": 0},
       {"rank": 11, "team": "Capos", "played": 7, "won": 1, "drawn": 0, "lost": 6, "points": 3, "gd": -13, "gf": 20, "ga": 33, "fp": 25},
-      {"rank": 12, "team": "Chamucos", "played": 4, "won": 0, "drawn": 0, "lost": 4, "points": 0, "gd": -21, "gf": 7, "ga": 28, "fp": 0},
-      {"rank": 13, "team": "Regios", "played": 7, "won": 0, "drawn": 0, "lost": 7, "points": 0, "gd": -29, "gf": 10, "ga": 39, "fp": 10}
+      {"rank": 12, "team": "Regios", "played": 8, "won": 1, "drawn": 0, "lost": 7, "points": 3, "gd": -23, "gf": 19, "ga": 42, "fp": 15},
+      {"rank": 13, "team": "Chamucos", "played": 5, "won": 0, "drawn": 0, "lost": 5, "points": 0, "gd": -27, "gf": 10, "ga": 37, "fp": 0}
     ]
   },
   "current": {
