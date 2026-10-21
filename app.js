@@ -190,10 +190,12 @@ function renderSchedule(data) {
         <div class="schedule-feature-label"><span>Próximo partido</span><strong>J${next.matchday}</strong></div>
         <h3>Cuervos <span>vs</span> ${next.rival}</h3>
         <p>${formatDate(next.date, { weekday: "long" })} · ${next.time} h</p>
-        <div class="schedule-feature-duty">
-          <span>${next.service ? "🍺 Servicio" : "🔥 Asador"}</span>
-          <strong>${next.service ? `${next.service} · Sin asador` : next.asador}</strong>
-        </div>
+        ${next.service || next.asador ? `
+          <div class="schedule-feature-duty">
+            <span>${next.service ? "🍺 Servicio" : "🔥 Asador"}</span>
+            <strong>${next.service ? `${next.service} · Sin asador` : next.asador}</strong>
+          </div>
+        ` : ""}
       </div>
       <div class="schedule-versus" aria-hidden="true">
         <img src="assets/logo-cuervos.png" alt="">
@@ -224,10 +226,12 @@ function renderSchedule(data) {
             <time datetime="${fixture.date}T${fixture.time}">${formatDate(fixture.date, { weekday: "short", year: undefined })}</time>
             <span>${fixture.time} h</span>
           </div>
-          <div class="schedule-duty">
-            <span>${fixture.service ? "🍺 Servicio" : "🔥 Asador"}</span>
-            <strong>${fixture.service ? `${fixture.service} · Sin asador` : fixture.asador}</strong>
-          </div>
+          ${fixture.service || fixture.asador ? `
+            <div class="schedule-duty">
+              <span>${fixture.service ? "🍺 Servicio" : "🔥 Asador"}</span>
+              <strong>${fixture.service ? `${fixture.service} · Sin asador` : fixture.asador}</strong>
+            </div>
+          ` : '<div class="schedule-duty" aria-hidden="true"></div>'}
           <div class="schedule-status status-${status.toLowerCase()}">
             ${match ? `<strong>${match.gf}–${match.ga}</strong><span>${status}</span>` : `<span>${status}</span>`}
           </div>
