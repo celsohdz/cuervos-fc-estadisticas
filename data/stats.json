@@ -220,9 +220,10 @@
     "date": "2026-10-26",
     "time": "21:00",
     "rival": "Piratas",
-    "asador": "Julio / Julio Jr"
+    "asador": null
   },
   "rescheduledMatch": null,
+  "pendingAsadorTurn": "Ángel / Cris / Polo",
   "seasons": [
     {
       "season": "Apertura 2024",
@@ -2248,28 +2249,28 @@
       "date": "2026-10-26",
       "time": "21:00",
       "rival": "Piratas",
-      "asador": "Julio / Julio Jr"
+      "asador": null
     },
     {
       "matchday": 11,
       "date": "2026-11-05",
       "time": "20:00",
       "rival": "Compadres",
-      "asador": "Celso / Alejandro"
+      "asador": "Julio / Julio Jr"
     },
     {
       "matchday": 12,
       "date": "2026-11-09",
       "time": "20:00",
       "rival": "Brodys FC",
-      "asador": "Cacho / Edson"
+      "asador": "Celso / Alejandro"
     },
     {
       "matchday": 13,
       "date": "2026-11-19",
       "time": "21:00",
       "rival": "Capos",
-      "asador": "Ángel / Cris / Polo"
+      "asador": "Cacho / Edson"
     }
   ]
 }
