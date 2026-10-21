@@ -32,7 +32,7 @@
     "gd": -5,
     "goalsPerGame": 4.125,
     "concededPerGame": 4.75,
-    "playerGoals": 31,
+    "playerGoals": 33,
     "assists": 21,
     "yellowCards": 3,
     "redCards": null,
@@ -79,7 +79,7 @@
       "season": "Clausura 2026",
       "player": "Ángel Verde",
       "played": 4,
-      "goals": 3,
+      "goals": 5,
       "assists": 0,
       "yellowCards": null,
       "redCards": null
@@ -208,9 +208,12 @@
       "Leopoldo Hinojosa",
       "Patricio de la Cruz"
     ],
-    "goalEvents": [],
+    "goalEvents": [
+      {"goal": 1, "scorer": "Ángel Verde", "assistant": null},
+      {"goal": 2, "scorer": "Ángel Verde", "assistant": null}
+    ],
     "yellowCards": [],
-    "individualStatsPending": true
+    "individualStatsPending": false
   },
   "nextMatch": {
     "matchday": 10,
@@ -2174,9 +2177,12 @@
         "Leopoldo Hinojosa",
         "Patricio de la Cruz"
       ],
-      "goalEvents": [],
+      "goalEvents": [
+        {"goal": 1, "scorer": "Ángel Verde", "assistant": null},
+        {"goal": 2, "scorer": "Ángel Verde", "assistant": null}
+      ],
       "yellowCards": [],
-      "individualStatsPending": true
+      "individualStatsPending": false
     }
   ],
   "fixtures": [
