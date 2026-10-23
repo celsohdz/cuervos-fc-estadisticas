@@ -3,7 +3,7 @@
   "currentSeason": "Clausura 2026",
   "updatedAt": "2026-10-21",
   "standings": {
-    "asOf": "2026-10-21",
+    "asOf": "2026-10-23",
     "phase": "Fase regular",
     "rows": [
       {"rank": 1, "team": "Caras Sucias", "played": 8, "won": 7, "drawn": 0, "lost": 1, "points": 21, "gd": 46, "gf": 55, "ga": 9, "fp": 30},
