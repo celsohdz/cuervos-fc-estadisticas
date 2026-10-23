@@ -70,8 +70,8 @@
       "season": "Clausura 2026",
       "player": "Jorge Gómez",
       "played": 6,
-      "goals": 2,
-      "assists": 0,
+      "goals": 3,
+      "assists": 1,
       "yellowCards": null,
       "redCards": null
     },
@@ -152,8 +152,8 @@
       "season": "Clausura 2026",
       "player": "Eduardo Garza",
       "played": 3,
-      "goals": 1,
-      "assists": 1,
+      "goals": 0,
+      "assists": 0,
       "yellowCards": null,
       "redCards": null
     },
@@ -360,8 +360,8 @@
       "player": "Jorge Gómez",
       "seasons": 2,
       "played": 14,
-      "goals": 15,
-      "assists": 2,
+      "goals": 16,
+      "assists": 3,
       "yellowCards": 0,
       "redCards": 0
     },
@@ -594,8 +594,8 @@
       "player": "Eduardo Garza",
       "seasons": 2,
       "played": 8,
-      "goals": 1,
-      "assists": 1,
+      "goals": 0,
+      "assists": 0,
       "yellowCards": 0,
       "redCards": 0
     },
@@ -2101,8 +2101,8 @@
         "Juan Carlos de la Garza"
       ],
       "goalEvents": [
-        {"goal": 1, "scorer": "Eduardo Garza", "assistant": "Alejandro Hernández"},
-        {"goal": 2, "scorer": "Ángel Verde", "assistant": "Eduardo Garza"},
+        {"goal": 1, "scorer": "Jorge Gómez", "assistant": "Alejandro Hernández"},
+        {"goal": 2, "scorer": "Ángel Verde", "assistant": "Jorge Gómez"},
         {"goal": 3, "scorer": "Ángel Verde", "assistant": "Juan Carlos de la Garza"}
       ],
       "yellowCards": []
