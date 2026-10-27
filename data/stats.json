@@ -33,7 +33,7 @@
     "goalsPerGame": 3.888888888888889,
     "concededPerGame": 4.333333333333333,
     "playerGoals": 35,
-    "assists": 21,
+    "assists": 23,
     "yellowCards": 4,
     "redCards": null,
     "finish": "En curso"
@@ -53,7 +53,7 @@
       "player": "Julio Jáuregui Jr",
       "played": 8,
       "goals": 5,
-      "assists": 7,
+      "assists": 8,
       "yellowCards": null,
       "redCards": null
     },
@@ -159,6 +159,15 @@
     },
     {
       "season": "Clausura 2026",
+      "player": "Robert de los Santos",
+      "played": 1,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": null,
+      "redCards": null
+    },
+    {
+      "season": "Clausura 2026",
       "player": "Juan Carlos Fernández",
       "played": 8,
       "goals": 0,
@@ -205,14 +214,15 @@
       "Juan Carlos de la Garza",
       "Julio Jáuregui",
       "Julio Jáuregui Jr",
-      "Leopoldo Hinojosa"
+      "Leopoldo Hinojosa",
+      "Robert de los Santos"
     ],
     "goalEvents": [
-      {"goal": 1, "scorer": "Jorge Gómez", "assistant": null},
-      {"goal": 2, "scorer": "Jorge Gómez", "assistant": null}
+      {"goal": 1, "scorer": "Jorge Gómez", "assistant": "Julio Jáuregui Jr"},
+      {"goal": 2, "scorer": "Jorge Gómez", "assistant": "Robert de los Santos"}
     ],
     "yellowCards": ["Juan Carlos Fernández"],
-    "individualStatsPending": true
+    "individualStatsPending": false
   },
   "nextMatch": {
     "matchday": 11,
@@ -321,7 +331,7 @@
       "goalsPerGame": 3.888888888888889,
       "concededPerGame": 4.333333333333333,
       "playerGoals": 35,
-      "assists": 21,
+      "assists": 23,
       "yellowCards": 4,
       "redCards": null,
       "finish": "En curso"
@@ -351,7 +361,7 @@
       "seasons": 2,
       "played": 17,
       "goals": 18,
-      "assists": 26,
+      "assists": 27,
       "yellowCards": 0,
       "redCards": 0
     },
@@ -595,6 +605,15 @@
       "played": 8,
       "goals": 0,
       "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0
+    },
+    {
+      "player": "Robert de los Santos",
+      "seasons": 1,
+      "played": 1,
+      "goals": 0,
+      "assists": 1,
       "yellowCards": 0,
       "redCards": 0
     },
@@ -2213,14 +2232,15 @@
         "Juan Carlos de la Garza",
         "Julio Jáuregui",
         "Julio Jáuregui Jr",
-        "Leopoldo Hinojosa"
+        "Leopoldo Hinojosa",
+        "Robert de los Santos"
       ],
       "goalEvents": [
-        {"goal": 1, "scorer": "Jorge Gómez", "assistant": null},
-        {"goal": 2, "scorer": "Jorge Gómez", "assistant": null}
+        {"goal": 1, "scorer": "Jorge Gómez", "assistant": "Julio Jáuregui Jr"},
+        {"goal": 2, "scorer": "Jorge Gómez", "assistant": "Robert de los Santos"}
       ],
       "yellowCards": ["Juan Carlos Fernández"],
-      "individualStatsPending": true
+      "individualStatsPending": false
     }
   ],
   "fixtures": [
