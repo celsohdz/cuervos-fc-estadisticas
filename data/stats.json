@@ -1,9 +1,9 @@
 {
   "team": "Cuervos FC",
   "currentSeason": "Clausura 2026",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-29",
   "standings": {
-    "asOf": "2026-10-27",
+    "asOf": "2026-10-29",
     "phase": "Fase regular",
     "rows": [
       {"rank": 1, "team": "Caras Sucias", "played": 9, "won": 8, "drawn": 0, "lost": 1, "points": 24, "gd": 52, "gf": 62, "ga": 10, "fp": 30},
@@ -15,10 +15,10 @@
       {"rank": 7, "team": "La Grilla", "played": 9, "won": 4, "drawn": 1, "lost": 4, "points": 13, "gd": 4, "gf": 30, "ga": 26, "fp": 15},
       {"rank": 8, "team": "Boca Jr", "played": 9, "won": 4, "drawn": 0, "lost": 5, "points": 12, "gd": 5, "gf": 46, "ga": 41, "fp": 25},
       {"rank": 9, "team": "Roma", "played": 9, "won": 4, "drawn": 0, "lost": 5, "points": 12, "gd": -12, "gf": 27, "ga": 39, "fp": 0},
-      {"rank": 10, "team": "Compadres", "played": 9, "won": 3, "drawn": 0, "lost": 6, "points": 9, "gd": -26, "gf": 19, "ga": 45, "fp": 0},
-      {"rank": 11, "team": "Capos", "played": 9, "won": 2, "drawn": 0, "lost": 7, "points": 6, "gd": -12, "gf": 27, "ga": 39, "fp": 25},
+      {"rank": 10, "team": "Capos", "played": 10, "won": 3, "drawn": 0, "lost": 7, "points": 9, "gd": 0, "gf": 39, "ga": 39, "fp": 25},
+      {"rank": 11, "team": "Compadres", "played": 9, "won": 3, "drawn": 0, "lost": 6, "points": 9, "gd": -26, "gf": 19, "ga": 45, "fp": 0},
       {"rank": 12, "team": "Regios", "played": 8, "won": 1, "drawn": 0, "lost": 7, "points": 3, "gd": -23, "gf": 19, "ga": 42, "fp": 15},
-      {"rank": 13, "team": "Chamucos", "played": 7, "won": 0, "drawn": 0, "lost": 7, "points": 0, "gd": -43, "gf": 13, "ga": 56, "fp": 0}
+      {"rank": 13, "team": "Chamucos", "played": 8, "won": 0, "drawn": 0, "lost": 8, "points": 0, "gd": -55, "gf": 13, "ga": 68, "fp": 0}
     ]
   },
   "current": {
