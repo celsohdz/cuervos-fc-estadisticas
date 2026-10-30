@@ -10,15 +10,15 @@
       {"rank": 2, "team": "Brodys FC", "played": 9, "won": 7, "drawn": 0, "lost": 2, "points": 21, "gd": 29, "gf": 60, "ga": 31, "fp": 20},
       {"rank": 3, "team": "Piratas", "played": 9, "won": 7, "drawn": 0, "lost": 2, "points": 21, "gd": 23, "gf": 47, "ga": 24, "fp": 35},
       {"rank": 4, "team": "Gunners", "played": 9, "won": 6, "drawn": 0, "lost": 3, "points": 18, "gd": 1, "gf": 36, "ga": 35, "fp": 10},
-      {"rank": 5, "team": "Forza", "played": 9, "won": 5, "drawn": 1, "lost": 3, "points": 16, "gd": 6, "gf": 45, "ga": 39, "fp": 40},
-      {"rank": 6, "team": "Cuervos", "played": 9, "won": 5, "drawn": 0, "lost": 4, "points": 15, "gd": -4, "gf": 35, "ga": 39, "fp": 20},
-      {"rank": 7, "team": "La Grilla", "played": 9, "won": 4, "drawn": 1, "lost": 4, "points": 13, "gd": 4, "gf": 30, "ga": 26, "fp": 15},
-      {"rank": 8, "team": "Boca Jr", "played": 9, "won": 4, "drawn": 0, "lost": 5, "points": 12, "gd": 5, "gf": 46, "ga": 41, "fp": 25},
+      {"rank": 5, "team": "La Grilla", "played": 10, "won": 5, "drawn": 1, "lost": 4, "points": 16, "gd": 12, "gf": 41, "ga": 29, "fp": 15},
+      {"rank": 6, "team": "Forza", "played": 9, "won": 5, "drawn": 1, "lost": 3, "points": 16, "gd": 6, "gf": 45, "ga": 39, "fp": 40},
+      {"rank": 7, "team": "Boca Jr", "played": 10, "won": 5, "drawn": 0, "lost": 5, "points": 15, "gd": 6, "gf": 52, "ga": 46, "fp": 30},
+      {"rank": 8, "team": "Cuervos", "played": 9, "won": 5, "drawn": 0, "lost": 4, "points": 15, "gd": -4, "gf": 35, "ga": 39, "fp": 20},
       {"rank": 9, "team": "Roma", "played": 9, "won": 4, "drawn": 0, "lost": 5, "points": 12, "gd": -12, "gf": 27, "ga": 39, "fp": 0},
       {"rank": 10, "team": "Capos", "played": 10, "won": 3, "drawn": 0, "lost": 7, "points": 9, "gd": 0, "gf": 39, "ga": 39, "fp": 25},
       {"rank": 11, "team": "Compadres", "played": 9, "won": 3, "drawn": 0, "lost": 6, "points": 9, "gd": -26, "gf": 19, "ga": 45, "fp": 0},
-      {"rank": 12, "team": "Regios", "played": 8, "won": 1, "drawn": 0, "lost": 7, "points": 3, "gd": -23, "gf": 19, "ga": 42, "fp": 15},
-      {"rank": 13, "team": "Chamucos", "played": 8, "won": 0, "drawn": 0, "lost": 8, "points": 0, "gd": -55, "gf": 13, "ga": 68, "fp": 0}
+      {"rank": 12, "team": "Regios", "played": 9, "won": 1, "drawn": 0, "lost": 8, "points": 3, "gd": -24, "gf": 24, "ga": 48, "fp": 15},
+      {"rank": 13, "team": "Chamucos", "played": 9, "won": 0, "drawn": 0, "lost": 9, "points": 0, "gd": -63, "gf": 16, "ga": 79, "fp": 0}
     ]
   },
   "current": {
