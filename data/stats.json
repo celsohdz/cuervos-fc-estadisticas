@@ -33,7 +33,7 @@
     "goalsPerGame": 4.6,
     "concededPerGame": 3.9,
     "playerGoals": 46,
-    "assists": 23,
+    "assists": 30,
     "yellowCards": 4,
     "redCards": null,
     "finish": "En curso"
@@ -53,7 +53,7 @@
       "player": "Ángel Verde",
       "played": 5,
       "goals": 9,
-      "assists": 0,
+      "assists": 1,
       "yellowCards": null,
       "redCards": null
     },
@@ -62,7 +62,7 @@
       "player": "Jorge Gómez",
       "played": 8,
       "goals": 7,
-      "assists": 1,
+      "assists": 2,
       "yellowCards": null,
       "redCards": null
     },
@@ -71,7 +71,7 @@
       "player": "Julio Jáuregui Jr",
       "played": 9,
       "goals": 6,
-      "assists": 8,
+      "assists": 9,
       "yellowCards": null,
       "redCards": null
     },
@@ -80,7 +80,7 @@
       "player": "Juan Carlos de la Garza",
       "played": 8,
       "goals": 6,
-      "assists": 3,
+      "assists": 5,
       "yellowCards": null,
       "redCards": null
     },
@@ -107,7 +107,7 @@
       "player": "Emiliano Mercado",
       "played": 10,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "yellowCards": 1,
       "redCards": null
     },
@@ -125,7 +125,7 @@
       "player": "Celso Hernández",
       "played": 10,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "yellowCards": null,
       "redCards": null
     },
@@ -221,20 +221,20 @@
       "Robert de los Santos"
     ],
     "goalEvents": [
-      {"goal": 1, "scorer": "Ángel Verde", "assistant": null},
+      {"goal": 1, "scorer": "Ángel Verde", "assistant": "Juan Carlos de la Garza"},
       {"goal": 2, "scorer": "Ángel Verde", "assistant": null},
-      {"goal": 3, "scorer": "Ángel Verde", "assistant": null},
+      {"goal": 3, "scorer": "Ángel Verde", "assistant": "Emiliano Mercado"},
       {"goal": 4, "scorer": "Ángel Verde", "assistant": null},
-      {"goal": 5, "scorer": "Christian Carreño", "assistant": null},
-      {"goal": 6, "scorer": "Christian Carreño", "assistant": null},
+      {"goal": 5, "scorer": "Christian Carreño", "assistant": "Juan Carlos de la Garza"},
+      {"goal": 6, "scorer": "Christian Carreño", "assistant": "Jorge Gómez"},
       {"goal": 7, "scorer": "Christian Carreño", "assistant": null},
-      {"goal": 8, "scorer": "Jorge Gómez", "assistant": null},
+      {"goal": 8, "scorer": "Jorge Gómez", "assistant": "Julio Jáuregui Jr"},
       {"goal": 9, "scorer": "Jorge Gómez", "assistant": null},
-      {"goal": 10, "scorer": "Juan Carlos de la Garza", "assistant": null},
-      {"goal": 11, "scorer": "Julio Jáuregui Jr", "assistant": null}
+      {"goal": 10, "scorer": "Juan Carlos de la Garza", "assistant": "Ángel Verde"},
+      {"goal": 11, "scorer": "Julio Jáuregui Jr", "assistant": "Celso Hernández"}
     ],
     "yellowCards": [],
-    "individualStatsPending": true
+    "individualStatsPending": false
   },
   "nextMatch": {
     "matchday": 12,
@@ -343,7 +343,7 @@
       "goalsPerGame": 4.6,
       "concededPerGame": 3.9,
       "playerGoals": 46,
-      "assists": 23,
+      "assists": 30,
       "yellowCards": 4,
       "redCards": null,
       "finish": "En curso"
@@ -373,7 +373,7 @@
       "seasons": 2,
       "played": 18,
       "goals": 19,
-      "assists": 27,
+      "assists": 28,
       "yellowCards": 0,
       "redCards": 0
     },
@@ -382,7 +382,7 @@
       "seasons": 2,
       "played": 16,
       "goals": 20,
-      "assists": 3,
+      "assists": 4,
       "yellowCards": 0,
       "redCards": 0
     },
@@ -391,7 +391,7 @@
       "seasons": 4,
       "played": 35,
       "goals": 13,
-      "assists": 11,
+      "assists": 12,
       "yellowCards": 2,
       "redCards": 0
     },
@@ -409,7 +409,7 @@
       "seasons": 2,
       "played": 15,
       "goals": 16,
-      "assists": 8,
+      "assists": 10,
       "yellowCards": 0,
       "redCards": 0
     },
@@ -427,7 +427,7 @@
       "seasons": 4,
       "played": 34,
       "goals": 10,
-      "assists": 2,
+      "assists": 3,
       "yellowCards": 1,
       "redCards": 0
     },
@@ -580,7 +580,7 @@
       "seasons": 1,
       "played": 5,
       "goals": 9,
-      "assists": 0,
+      "assists": 1,
       "yellowCards": 0,
       "redCards": 0
     },
@@ -2290,20 +2290,20 @@
         "Robert de los Santos"
       ],
       "goalEvents": [
-        {"goal": 1, "scorer": "Ángel Verde", "assistant": null},
+        {"goal": 1, "scorer": "Ángel Verde", "assistant": "Juan Carlos de la Garza"},
         {"goal": 2, "scorer": "Ángel Verde", "assistant": null},
-        {"goal": 3, "scorer": "Ángel Verde", "assistant": null},
+        {"goal": 3, "scorer": "Ángel Verde", "assistant": "Emiliano Mercado"},
         {"goal": 4, "scorer": "Ángel Verde", "assistant": null},
-        {"goal": 5, "scorer": "Christian Carreño", "assistant": null},
-        {"goal": 6, "scorer": "Christian Carreño", "assistant": null},
+        {"goal": 5, "scorer": "Christian Carreño", "assistant": "Juan Carlos de la Garza"},
+        {"goal": 6, "scorer": "Christian Carreño", "assistant": "Jorge Gómez"},
         {"goal": 7, "scorer": "Christian Carreño", "assistant": null},
-        {"goal": 8, "scorer": "Jorge Gómez", "assistant": null},
+        {"goal": 8, "scorer": "Jorge Gómez", "assistant": "Julio Jáuregui Jr"},
         {"goal": 9, "scorer": "Jorge Gómez", "assistant": null},
-        {"goal": 10, "scorer": "Juan Carlos de la Garza", "assistant": null},
-        {"goal": 11, "scorer": "Julio Jáuregui Jr", "assistant": null}
+        {"goal": 10, "scorer": "Juan Carlos de la Garza", "assistant": "Ángel Verde"},
+        {"goal": 11, "scorer": "Julio Jáuregui Jr", "assistant": "Celso Hernández"}
       ],
       "yellowCards": [],
-      "individualStatsPending": true
+      "individualStatsPending": false
     }
   ],
   "fixtures": [
