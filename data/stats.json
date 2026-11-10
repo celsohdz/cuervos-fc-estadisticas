@@ -33,7 +33,7 @@
     "goalsPerGame": 4.636363636363637,
     "concededPerGame": 3.727272727272727,
     "playerGoals": 51,
-    "assists": 30,
+    "assists": 34,
     "yellowCards": 4,
     "redCards": null,
     "finish": "En curso"
@@ -53,7 +53,7 @@
       "player": "Ángel Verde",
       "played": 6,
       "goals": 11,
-      "assists": 1,
+      "assists": 3,
       "yellowCards": null,
       "redCards": null
     },
@@ -71,7 +71,7 @@
       "player": "Julio Jáuregui Jr",
       "played": 10,
       "goals": 7,
-      "assists": 9,
+      "assists": 10,
       "yellowCards": null,
       "redCards": null
     },
@@ -161,7 +161,7 @@
       "player": "Robert de los Santos",
       "played": 3,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "yellowCards": null,
       "redCards": null
     },
@@ -228,14 +228,14 @@
       "Rodrigo Lozano Vela"
     ],
     "goalEvents": [
-      {"goal": 1, "scorer": "Ángel Verde", "assistant": null},
-      {"goal": 2, "scorer": "Ángel Verde", "assistant": null},
-      {"goal": 3, "scorer": "Emiliano Mercado", "assistant": null},
-      {"goal": 4, "scorer": "Jorge Gómez", "assistant": null},
-      {"goal": 5, "scorer": "Julio Jáuregui Jr", "assistant": null}
+      {"goal": 1, "scorer": "Julio Jáuregui Jr", "assistant": null},
+      {"goal": 2, "scorer": "Jorge Gómez", "assistant": "Ángel Verde"},
+      {"goal": 3, "scorer": "Emiliano Mercado", "assistant": "Ángel Verde"},
+      {"goal": 4, "scorer": "Ángel Verde", "assistant": "Robert de los Santos"},
+      {"goal": 5, "scorer": "Ángel Verde", "assistant": "Julio Jáuregui Jr"}
     ],
     "yellowCards": [],
-    "individualStatsPending": true
+    "individualStatsPending": false
   },
   "nextMatch": {
     "matchday": 13,
@@ -344,7 +344,7 @@
       "goalsPerGame": 4.636363636363637,
       "concededPerGame": 3.727272727272727,
       "playerGoals": 51,
-      "assists": 30,
+      "assists": 34,
       "yellowCards": 4,
       "redCards": null,
       "finish": "En curso"
@@ -374,7 +374,7 @@
       "seasons": 2,
       "played": 19,
       "goals": 20,
-      "assists": 28,
+      "assists": 29,
       "yellowCards": 0,
       "redCards": 0
     },
@@ -581,7 +581,7 @@
       "seasons": 1,
       "played": 6,
       "goals": 11,
-      "assists": 1,
+      "assists": 3,
       "yellowCards": 0,
       "redCards": 0
     },
@@ -626,7 +626,7 @@
       "seasons": 1,
       "played": 3,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "yellowCards": 0,
       "redCards": 0
     },
@@ -2350,14 +2350,14 @@
         "Rodrigo Lozano Vela"
       ],
       "goalEvents": [
-        {"goal": 1, "scorer": "Ángel Verde", "assistant": null},
-        {"goal": 2, "scorer": "Ángel Verde", "assistant": null},
-        {"goal": 3, "scorer": "Emiliano Mercado", "assistant": null},
-        {"goal": 4, "scorer": "Jorge Gómez", "assistant": null},
-        {"goal": 5, "scorer": "Julio Jáuregui Jr", "assistant": null}
+        {"goal": 1, "scorer": "Julio Jáuregui Jr", "assistant": null},
+        {"goal": 2, "scorer": "Jorge Gómez", "assistant": "Ángel Verde"},
+        {"goal": 3, "scorer": "Emiliano Mercado", "assistant": "Ángel Verde"},
+        {"goal": 4, "scorer": "Ángel Verde", "assistant": "Robert de los Santos"},
+        {"goal": 5, "scorer": "Ángel Verde", "assistant": "Julio Jáuregui Jr"}
       ],
       "yellowCards": [],
-      "individualStatsPending": true
+      "individualStatsPending": false
     }
   ],
   "fixtures": [
