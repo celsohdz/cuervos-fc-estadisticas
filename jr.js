@@ -30,7 +30,12 @@ function updateNextJuniorMatch(now = new Date()) {
     const isNext = card === next;
     card.classList.toggle("is-next", isNext);
     const status = card.querySelector(".jr-match-meta b");
-    if (status) status.textContent = isNext ? "Próximo" : "Programado";
+    if (status) {
+      const stage = card.dataset.stage;
+      status.textContent = isNext
+        ? (stage ? `${stage} · Próximo` : "Próximo")
+        : (stage || "Programado");
+    }
   });
 }
 
