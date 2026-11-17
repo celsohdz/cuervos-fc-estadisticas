@@ -50,14 +50,14 @@
     {"season": "Clausura 2026", "player": "Eduardo Garza", "played": 8, "goals": 17, "assists": 0, "yellowCards": 0, "redCards": 0},
     {"season": "Clausura 2026", "player": "Marcelo Cañamar", "played": 7, "goals": 10, "assists": 0, "yellowCards": 0, "redCards": 0},
     {"season": "Clausura 2026", "player": "Mauricio Marroquín", "played": 8, "goals": 7, "assists": 0, "yellowCards": 0, "redCards": 0, "ownGoals": 1},
-    {"season": "Clausura 2026", "player": "Mateo García Mtz.", "played": 7, "goals": 6, "assists": 0, "yellowCards": 0, "redCards": 0},
+    {"season": "Clausura 2026", "player": "Mateo García Mtz.", "played": 8, "goals": 6, "assists": 0, "yellowCards": 0, "redCards": 0},
     {"season": "Clausura 2026", "player": "Luis Páez", "played": 8, "goals": 5, "assists": 0, "yellowCards": 0, "redCards": 0},
     {"season": "Clausura 2026", "player": "Patricio Cañamar", "played": 7, "goals": 3, "assists": 0, "yellowCards": 3, "redCards": 0, "ownGoals": 1},
-    {"season": "Clausura 2026", "player": "Patricio Hernández", "played": 7, "goals": 2, "assists": 0, "yellowCards": 0, "redCards": 0},
-    {"season": "Clausura 2026", "player": "Emilio González", "played": 7, "goals": 2, "assists": 0, "yellowCards": 1, "redCards": 0},
-    {"season": "Clausura 2026", "player": "Diego Mercado", "played": 5, "goals": 1, "assists": 0, "yellowCards": 0, "redCards": 0},
+    {"season": "Clausura 2026", "player": "Patricio Hernández", "played": 8, "goals": 2, "assists": 0, "yellowCards": 0, "redCards": 0},
+    {"season": "Clausura 2026", "player": "Emilio González", "played": 8, "goals": 2, "assists": 0, "yellowCards": 1, "redCards": 0},
+    {"season": "Clausura 2026", "player": "Diego Mercado", "played": 6, "goals": 1, "assists": 0, "yellowCards": 0, "redCards": 0},
     {"season": "Clausura 2026", "player": "Alan Hinojosa", "played": 1, "goals": 0, "assists": 0, "yellowCards": 0, "redCards": 0},
-    {"season": "Clausura 2026", "player": "Mateo García Vela", "played": 7, "goals": 0, "assists": 0, "yellowCards": 0, "redCards": 0, "position": "Portero"}
+    {"season": "Clausura 2026", "player": "Mateo García Vela", "played": 8, "goals": 0, "assists": 0, "yellowCards": 0, "redCards": 0, "position": "Portero"}
   ],
   "latestMatch": {
     "id": "jr-sf-2026",
@@ -78,6 +78,17 @@
     "result": "P",
     "goalDifference": -5,
     "individualStatsPending": false,
+    "attendees": [
+      "Eduardo Garza",
+      "Mauricio Marroquín",
+      "Mateo García Mtz.",
+      "Luis Páez",
+      "Patricio Cañamar",
+      "Patricio Hernández",
+      "Emilio González",
+      "Diego Mercado",
+      "Mateo García Vela"
+    ],
     "goalEvents": [
       {"goal": 1, "scorer": "Eduardo Garza"},
       {"goal": 2, "scorer": "Eduardo Garza"},
@@ -106,14 +117,14 @@
     {"player": "Eduardo Garza", "seasons": 1, "played": 8, "goals": 17, "assists": 0, "yellowCards": 0, "redCards": 0},
     {"player": "Marcelo Cañamar", "seasons": 1, "played": 7, "goals": 10, "assists": 0, "yellowCards": 0, "redCards": 0},
     {"player": "Mauricio Marroquín", "seasons": 1, "played": 8, "goals": 7, "assists": 0, "yellowCards": 0, "redCards": 0},
-    {"player": "Mateo García Mtz.", "seasons": 1, "played": 7, "goals": 6, "assists": 0, "yellowCards": 0, "redCards": 0},
+    {"player": "Mateo García Mtz.", "seasons": 1, "played": 8, "goals": 6, "assists": 0, "yellowCards": 0, "redCards": 0},
     {"player": "Luis Páez", "seasons": 1, "played": 8, "goals": 5, "assists": 0, "yellowCards": 0, "redCards": 0},
     {"player": "Patricio Cañamar", "seasons": 1, "played": 7, "goals": 3, "assists": 0, "yellowCards": 3, "redCards": 0},
-    {"player": "Patricio Hernández", "seasons": 1, "played": 7, "goals": 2, "assists": 0, "yellowCards": 0, "redCards": 0},
-    {"player": "Emilio González", "seasons": 1, "played": 7, "goals": 2, "assists": 0, "yellowCards": 1, "redCards": 0},
-    {"player": "Diego Mercado", "seasons": 1, "played": 5, "goals": 1, "assists": 0, "yellowCards": 0, "redCards": 0},
+    {"player": "Patricio Hernández", "seasons": 1, "played": 8, "goals": 2, "assists": 0, "yellowCards": 0, "redCards": 0},
+    {"player": "Emilio González", "seasons": 1, "played": 8, "goals": 2, "assists": 0, "yellowCards": 1, "redCards": 0},
+    {"player": "Diego Mercado", "seasons": 1, "played": 6, "goals": 1, "assists": 0, "yellowCards": 0, "redCards": 0},
     {"player": "Alan Hinojosa", "seasons": 1, "played": 1, "goals": 0, "assists": 0, "yellowCards": 0, "redCards": 0},
-    {"player": "Mateo García Vela", "seasons": 1, "played": 7, "goals": 0, "assists": 0, "yellowCards": 0, "redCards": 0}
+    {"player": "Mateo García Vela", "seasons": 1, "played": 8, "goals": 0, "assists": 0, "yellowCards": 0, "redCards": 0}
   ],
   "matches": [
     {"id": "jr-1", "season": "Clausura 2026", "competition": "Liga Premier", "phase": "Fase regular", "matchday": 1, "date": "2026-08-25", "time": "22:00", "home": "Roma", "homeGoals": 4, "awayGoals": 4, "away": "Cuervos JR", "condition": "Visitante", "rival": "Roma", "gf": 4, "ga": 4, "result": "E", "goalDifference": 0},
