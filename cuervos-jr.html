@@ -3,201 +3,105 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="assets/logo-cuervos.png">
-  <meta name="description" content="Sitio de Cuervos JR en la Liga Premier Clausura 2026.">
-  <meta name="theme-color" content="#080a0f">
-  <title>Cuervos JR · Liga Premier 2026</title>
-  <link rel="stylesheet" href="portal.css?v=20261006-1">
-  <script src="jr.js?v=20261111-1" defer></script>
+  <link rel="icon" type="image/jpeg" href="assets/team-logos-jr/cuervos-jr.jpg">
+  <meta name="description" content="Resultados, estadísticas e historia de Cuervos JR en la Liga Premier del Club de Lago.">
+  <meta name="theme-color" content="#090b10">
+  <title>Cuervos JR · Estadísticas</title>
+  <link rel="stylesheet" href="styles.css?v=20261117-1">
 </head>
-<body class="jr-page">
-  <header class="jr-header">
-    <a class="jr-back" href="index.html">← Inicio</a>
-    <a class="jr-brand" href="#inicio" aria-label="Cuervos JR, ir al inicio">
-      <span class="jr-mini-crest"><img src="assets/logo-cuervos.png" alt=""><b>JR</b></span>
-      <span><strong>Cuervos JR</strong><small>Nueva generación</small></span>
+<body class="jr-master-page" data-stats-url="data/stats-jr.json">
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Cuervos JR, ir al inicio">
+      <span class="crest" aria-hidden="true"><img src="assets/team-logos-jr/cuervos-jr.jpg" alt=""></span>
+      <span><strong>Cuervos JR</strong><small>Estadísticas del equipo</small></span>
     </a>
-    <nav aria-label="Navegación de Cuervos JR">
-      <a href="#partidos-jr">Partidos</a>
-      <a href="#tabla-jr">Tabla</a>
-      <a href="#jugadores-jr">Jugadores</a>
-      <a href="#videos-jr">Videos</a>
+    <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
+      <a href="#temporada">Temporada</a><a href="#rol-juegos">Partidos</a><a href="#tabla-general">Tabla general</a>
+      <a href="#jugadores">Jugadores</a><a href="#historia">Historia</a><a href="#resultados">Resultados</a><a href="#videos">Videos</a>
     </nav>
+    <div class="header-actions">
+      <a class="back-home" href="index.html" aria-label="Regresar a la selección de equipos">← Inicio</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button>
+    </div>
   </header>
 
   <main id="inicio">
-    <section class="jr-hero">
-      <div class="jr-hero-copy">
-        <p class="portal-eyebrow">Clausura 2026 · comienza el vuelo</p>
-        <h1>La nueva<br><em>parvada.</em></h1>
-        <p>Cuervos JR inicia su historia en la Liga Premier del Club de Lago. Este será el espacio para seguir sus partidos, jugadores y estadísticas.</p>
-        <a class="portal-button" href="#partidos-jr">Ver partidos</a>
-      </div>
-      <div class="jr-hero-visual">
-        <span class="jr-main-crest team-crest team-crest-jr">
-          <img src="assets/logo-cuervos.png" alt="Escudo de Cuervos JR">
-          <b>JR</b>
-        </span>
-        <div class="jr-debut-card">
-          <small>Debut</small>
-          <strong>Septiembre</strong>
-          <span>2026</span>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="league-lockup">
+          <span class="league-logo"><img src="assets/logo-liga-delago.png" alt="Logo de la liga Delago"></span>
+          <p class="eyebrow">Liga Premier · <span id="current-season-label">Temporada actual</span></p>
         </div>
+        <h1 id="hero-title">Los números<br><em>de Cuervos JR.</em></h1>
+        <p class="hero-intro">Cuervos JR inicia su historia en la Liga Premier del Club de Lago. Resultados, jugadores y trayectoria, reunidos en un solo lugar.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#temporada">Ver temporada</a><a class="button button-ghost" href="#historia">Explorar historia</a></div>
+      </div>
+      <div class="hero-side">
+        <img class="hero-crest" src="assets/team-logos-jr/cuervos-jr.jpg" alt="Escudo oficial de Cuervos JR">
+        <div class="latest-card" id="latest-match" aria-live="polite"><span class="skeleton">Cargando último resultado…</span></div>
+        <div class="next-card" id="next-match" aria-live="polite"><span class="skeleton">Cargando estado de la temporada…</span></div>
       </div>
     </section>
 
-    <section id="partidos-jr" class="jr-section jr-matches-section">
-      <div class="jr-section-heading">
-        <div>
-          <p class="portal-eyebrow">Liga Premier</p>
-          <h2>Partidos</h2>
-        </div>
-        <span class="jr-count">8 de fase regular · semifinal jugada</span>
-      </div>
-
-      <div class="jr-match-summary" aria-label="Resumen de la temporada">
-        <article><small>Récord</small><strong>5 G · 1 E · 2 P</strong></article>
-        <article><small>Goles a favor</small><strong>54</strong></article>
-        <article><small>Goles en contra</small><strong>40</strong></article>
-        <article><small>Diferencia</small><strong>+14</strong></article>
-      </div>
-
-      <div class="jr-matches-grid">
-        <article class="jr-match-card is-result" data-date="2026-08-25" data-time="22:00" data-result="true">
-          <div class="jr-match-meta"><span>25 ago 2026 · 10:00 p.m.</span><b>Final</b></div>
-          <div class="jr-match-score"><span>Roma</span><strong>4–4</strong><span>Cuervos JR</span></div>
-        </article>
-        <article class="jr-match-card is-result" data-date="2026-09-03" data-time="22:00" data-result="true">
-          <div class="jr-match-meta"><span>3 sep 2026 · 10:00 p.m.</span><b>Final</b></div>
-          <div class="jr-match-score"><span>Cuervos JR</span><strong>9–3</strong><span>Lagartos</span></div>
-        </article>
-        <article class="jr-match-card is-result" data-date="2026-09-10" data-time="22:00" data-result="true">
-          <div class="jr-match-meta"><span>10 sep 2026 · 10:00 p.m.</span><b>Final</b></div>
-          <div class="jr-match-score"><span>Real Chapulines</span><strong>2–12</strong><span>Cuervos JR</span></div>
-        </article>
-        <article class="jr-match-card is-result" data-date="2026-09-21" data-time="22:00" data-result="true">
-          <div class="jr-match-meta"><span>21 sep 2026 · 10:00 p.m.</span><b>Final</b></div>
-          <div class="jr-match-score"><span>Cuervos JR</span><strong>8–7</strong><span>Nandigang F.C.</span></div>
-        </article>
-        <article class="jr-match-card is-result" data-date="2026-10-08" data-time="22:00" data-result="true">
-          <div class="jr-match-meta"><span>8 oct 2026 · 10:00 p.m.</span><b>Final</b></div>
-          <div class="jr-match-score"><span>Cuervos JR</span><strong>6–4</strong><span>Regios</span></div>
-        </article>
-        <article class="jr-match-card is-result" data-date="2026-10-15" data-time="22:00" data-result="true">
-          <div class="jr-match-meta"><span>15 oct 2026 · 10:00 p.m.</span><b>Final</b></div>
-          <div class="jr-match-score"><span>Cuervos JR</span><strong>6–11</strong><span>Athletic</span></div>
-        </article>
-        <article class="jr-match-card is-result" data-date="2026-10-20" data-time="22:00" data-result="true">
-          <div class="jr-match-meta"><span>20 oct 2026 · 10:00 p.m.</span><b>Final</b></div>
-          <div class="jr-match-score"><span>Lagartos</span><strong>4–3</strong><span>Cuervos JR</span></div>
-        </article>
-        <article class="jr-match-card is-result" data-date="2026-11-05" data-time="22:00" data-result="true">
-          <div class="jr-match-meta"><span>5 nov 2026 · 10:00 p.m.</span><b>Final</b></div>
-          <div class="jr-match-score"><span>Athletic</span><strong>5–6</strong><span>Cuervos JR</span></div>
-        </article>
-        <article class="jr-match-card is-result" data-date="2026-11-16" data-time="22:00" data-result="true" data-stage="Semifinal">
-          <div class="jr-match-meta"><span>16 nov 2026 · 10:00 p.m.</span><b>Semifinal · Final</b></div>
-          <div class="jr-match-score"><span>Cuervos JR</span><strong>4–9</strong><span>Nandigang F.C.</span></div>
-        </article>
-      </div>
+    <section id="temporada" class="section section-current" aria-labelledby="season-title">
+      <div class="section-heading"><div><p class="eyebrow">Primera temporada</p><h2 id="season-title">Clausura 2026</h2></div><p class="updated" id="updated-at"></p></div>
+      <div class="metric-grid" id="season-metrics"></div><div class="record-bar" id="record-bar" aria-label="Distribución de resultados"></div>
     </section>
 
-    <section id="tabla-jr" class="jr-section jr-standings-section">
-      <div class="jr-section-heading">
-        <div>
-          <p class="portal-eyebrow">1ª fase regular</p>
-          <h2>Tabla general</h2>
-        </div>
-        <span class="jr-leader-pill">Cuervos JR · 2.º lugar</span>
-      </div>
-      <div class="jr-table-card">
-        <div class="jr-table-scroll" role="region" aria-label="Tabla general Liga Premier Clausura 2026" tabindex="0">
-          <table class="jr-standings-table">
-            <thead><tr><th>Equipo</th><th>Pts</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>GF</th><th>GC</th><th>Dif</th><th>FP</th></tr></thead>
-            <tbody>
-              <tr><th><span class="jr-rank">1</span><span class="jr-row-crest"><img src="assets/team-logos-jr/athletic.jpg" alt=""></span>Athletic</th><td><strong>18</strong></td><td>8</td><td>6</td><td>0</td><td>2</td><td>64</td><td>29</td><td>+35</td><td>20</td></tr>
-              <tr class="is-cuervos"><th><span class="jr-rank">2</span><span class="jr-row-crest"><img src="assets/team-logos-jr/cuervos-jr.jpg" alt=""></span>Cuervos JR</th><td><strong>16</strong></td><td>8</td><td>5</td><td>1</td><td>2</td><td>54</td><td>40</td><td>+14</td><td>10</td></tr>
-              <tr><th><span class="jr-rank">3</span><span class="jr-row-crest"><img src="assets/team-logos-jr/nandigang-fc.jpg" alt=""></span>Nandigang F.C.</th><td><strong>14</strong></td><td>8</td><td>4</td><td>2</td><td>2</td><td>54</td><td>35</td><td>+19</td><td>10</td></tr>
-              <tr><th><span class="jr-rank">4</span><span class="jr-row-crest"><img src="assets/team-logos-jr/roma.jpg" alt=""></span>Roma</th><td><strong>12</strong></td><td>8</td><td>3</td><td>3</td><td>2</td><td>37</td><td>39</td><td>-2</td><td>10</td></tr>
-              <tr><th><span class="jr-rank">5</span><span class="jr-row-crest"><img src="assets/team-logos-jr/lagartos.jpg" alt=""></span>Lagartos</th><td><strong>10</strong></td><td>8</td><td>3</td><td>1</td><td>4</td><td>31</td><td>48</td><td>-17</td><td>10</td></tr>
-              <tr><th><span class="jr-rank">6</span><span class="jr-row-crest"><img src="assets/team-logos-jr/regios.jpg" alt=""></span>Regios</th><td><strong>8</strong></td><td>8</td><td>2</td><td>2</td><td>4</td><td>33</td><td>43</td><td>-10</td><td>20</td></tr>
-              <tr><th><span class="jr-rank">7</span><span class="jr-row-crest"><img src="assets/team-logos-jr/real-chapulines.jpg" alt=""></span>Real Chapulines</th><td><strong>1</strong></td><td>8</td><td>0</td><td>1</td><td>7</td><td>23</td><td>62</td><td>-39</td><td>0</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <p class="jr-table-note">Corte: 5 de noviembre de 2026.</p>
+    <section id="rol-juegos" class="section section-schedule" aria-labelledby="schedule-title">
+      <div class="section-heading schedule-heading"><div><p class="eyebrow">Clausura 2026 · Liga Premier</p><h2 id="schedule-title">Partidos</h2></div><span class="section-tag">Club de Lago</span></div>
+      <div id="schedule-feature" class="schedule-feature" aria-live="polite"></div><div class="schedule-list" id="schedule-list"></div>
     </section>
 
-    <section id="jugadores-jr" class="jr-section jr-players-section">
-      <div class="jr-section-heading">
-        <div>
-          <p class="portal-eyebrow">Primera temporada</p>
-          <h2>Plantel y estadísticas</h2>
-        </div>
-        <span class="jr-count">48 goles · 7 PJ</span>
-      </div>
-      <div class="jr-player-layout">
-        <article class="jr-top-scorer">
-          <span>● Líder goleador</span>
-          <strong>15</strong>
-          <h3>Eduardo Garza</h3>
-          <p>7 partidos jugados</p>
-        </article>
-        <div class="jr-table-card">
-          <div class="jr-table-scroll" role="region" aria-label="Estadísticas de jugadores de Cuervos JR" tabindex="0">
-            <table class="jr-player-table">
-              <thead><tr><th>Jugador</th><th>PJ</th><th>G</th><th>TA</th><th>TR</th></tr></thead>
-              <tbody>
-                <tr><th>Eduardo Garza</th><td>7</td><td><strong>15</strong></td><td>0</td><td>0</td></tr>
-                <tr><th>Marcelo Cañamar</th><td>7</td><td><strong>10</strong></td><td>0</td><td>0</td></tr>
-                <tr><th>Mauricio Marroquín</th><td>7</td><td><strong>7</strong></td><td>0</td><td>0</td></tr>
-                <tr><th>Luis Páez</th><td>7</td><td><strong>4</strong></td><td>0</td><td>0</td></tr>
-                <tr><th>Mateo García Mtz.</th><td>7</td><td><strong>6</strong></td><td>0</td><td>0</td></tr>
-                <tr><th>Patricio Hernández</th><td>7</td><td><strong>2</strong></td><td>0</td><td>0</td></tr>
-                <tr><th>Emilio González</th><td>7</td><td><strong>2</strong></td><td><span class="jr-yellow-card" aria-label="Una tarjeta amarilla"></span>1</td><td>0</td></tr>
-                <tr><th>Diego Mercado</th><td>5</td><td><strong>1</strong></td><td>0</td><td>0</td></tr>
-                <tr><th>Patricio Cañamar</th><td>6</td><td><strong>2</strong></td><td><span class="jr-yellow-card" aria-label="Una tarjeta amarilla"></span>1</td><td>0</td></tr>
-                <tr><th>Alan Hinojosa</th><td>1</td><td><strong>0</strong></td><td>0</td><td>0</td></tr>
-                <tr><th>Mateo García Vela <span class="jr-position-badge">Portero</span></th><td>7</td><td><strong>0</strong></td><td>0</td><td>0</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+    <section id="tabla-general" class="section section-standings" aria-labelledby="standings-title">
+      <div class="section-heading"><div><p class="eyebrow">Liga Premier · 1ª fase regular</p><h2 id="standings-title">Tabla general</h2></div><p class="updated" id="standings-updated"></p></div>
+      <div class="standings-card"><div class="standings-scroll" role="region" aria-label="Tabla general de la Liga Premier Clausura 2026" tabindex="0">
+        <table class="standings-table"><caption>Clasificación de Liga Premier Clausura 2026</caption><thead><tr>
+          <th scope="col">Equipo</th><th scope="col" title="Partidos jugados">PJ</th><th scope="col" title="Ganados">G</th><th scope="col" title="Empatados">E</th>
+          <th scope="col" title="Perdidos">P</th><th scope="col" title="Puntos">Pts</th><th scope="col" title="Diferencia de goles">Dif</th><th scope="col" title="Goles a favor">GF</th>
+          <th scope="col" title="Goles en contra">GC</th><th scope="col" title="FP">FP</th>
+        </tr></thead><tbody id="standings-rows"></tbody></table>
+      </div></div>
+      <p class="standings-note">Tabla final de la fase regular. <span class="standings-swipe">Desliza la tabla para ver todas las columnas.</span></p>
     </section>
 
-    <section id="videos-jr" class="jr-section jr-videos-section">
-      <div class="jr-section-heading">
-        <div>
-          <p class="portal-eyebrow">Cuervos TV 📺</p>
-          <h2>Videos</h2>
+    <section id="jugadores" class="section" aria-labelledby="players-title">
+      <div class="section-heading"><div><p class="eyebrow">Rendimiento individual</p><h2 id="players-title">Jugadores de la temporada</h2></div><span class="section-tag">Partidos · goles · tarjetas</span></div>
+      <div class="leaders-layout">
+        <article class="leader-feature" id="top-scorer"></article>
+        <div class="table-card"><div class="table-scroll"><table><thead><tr>
+          <th>Jugador</th><th>PJ</th><th>G</th><th aria-label="Tarjetas amarillas"><span class="card-icon card-yellow" aria-hidden="true"></span>TA</th>
+          <th aria-label="Tarjetas rojas"><span class="card-icon card-red" aria-hidden="true"></span>TR</th>
+        </tr></thead><tbody id="current-player-rows"></tbody></table></div></div>
+      </div>
+      <p class="standings-note">Los autogoles registrados por CopaFácil no se suman a los goles individuales.</p>
+    </section>
+
+    <section id="historia" class="section section-dark" aria-labelledby="history-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Desde 2026</p><h2 id="history-title">Historia del equipo</h2></div>
+        <div class="segmented" role="group" aria-label="Ordenar líderes históricos">
+          <button class="segment active" type="button" data-ranking="goals">Goles</button><button class="segment" type="button" data-ranking="yellowCards">Amarillas</button><button class="segment" type="button" data-ranking="redCards">Rojas</button>
         </div>
       </div>
+      <div class="history-layout"><div class="ranking-card"><p class="card-kicker">Líderes históricos</p><ol class="ranking-list" id="all-time-ranking"></ol></div><div class="season-history" id="season-history"></div></div>
+    </section>
+
+    <section id="resultados" class="section" aria-labelledby="results-title">
+      <div class="section-heading"><div><p class="eyebrow">Partido por partido</p><h2 id="results-title">Resultados</h2></div><label class="select-wrap"><span>Temporada</span><select id="season-filter" aria-label="Filtrar resultados por temporada"></select></label></div>
+      <div class="results-list" id="results-list"></div>
+    </section>
+
+    <section id="videos" class="section section-videos" aria-labelledby="videos-title">
+      <div class="section-heading"><div><p class="eyebrow">Cuervos TV 📺</p><h2 id="videos-title">Videos</h2></div><span class="section-tag">Videos disponibles</span></div>
       <div class="playlist-showcase">
-        <article class="playlist-panel">
-          <div class="playlist-player playlist-empty" data-playlist="PLZXHc3cxe6iY" aria-label="Playlist Goles y jugadas">
-            <div class="playlist-placeholder"><span class="playlist-play" aria-hidden="true"></span><strong>Cargando videos</strong><small>La playlist se actualiza automáticamente</small></div>
-            <div class="playlist-embed" aria-hidden="true"></div>
-          </div>
-          <div class="playlist-copy"><span>Playlist</span><h3>Goles y jugadas</h3><p>Mira aquí los goles y mejores momentos de Cuervos JR.</p></div>
-        </article>
-        <article class="playlist-panel">
-          <div class="playlist-player playlist-empty" data-playlist="PLeJYbha473_k" aria-label="Playlist Partidos">
-            <div class="playlist-placeholder"><span class="playlist-play" aria-hidden="true"></span><strong>Cargando videos</strong><small>La playlist se actualiza automáticamente</small></div>
-            <div class="playlist-embed" aria-hidden="true"></div>
-          </div>
-          <div class="playlist-copy"><span>Playlist</span><h3>Partidos</h3><p>Mira aquí los partidos completos de Cuervos JR.</p></div>
-        </article>
+        <article class="playlist-panel"><div class="playlist-player playlist-empty" data-playlist="PLZXHc3cxe6iY" aria-label="Playlist Goles y jugadas"><div class="playlist-placeholder"><span class="playlist-play" aria-hidden="true"></span><strong>Cargando videos</strong><small>La playlist se actualiza automáticamente</small></div><div class="playlist-embed" aria-hidden="true"></div></div><div class="playlist-copy"><span>Playlist</span><h3>Goles y jugadas</h3><p>Mira aquí los goles y mejores momentos de Cuervos JR.</p></div></article>
+        <article class="playlist-panel"><div class="playlist-player playlist-empty" data-playlist="PLeJYbha473_k" aria-label="Playlist Partidos"><div class="playlist-placeholder"><span class="playlist-play" aria-hidden="true"></span><strong>Cargando videos</strong><small>La playlist se actualiza automáticamente</small></div><div class="playlist-embed" aria-hidden="true"></div></div><div class="playlist-copy"><span>Playlist</span><h3>Partidos</h3><p>Mira aquí los partidos completos de Cuervos JR.</p></div></article>
       </div>
     </section>
-
   </main>
 
-  <footer class="jr-footer">
-    <strong>CUERVOS <span>JR</span></strong>
-    <a href="index.html">Regresar a la selección de equipos</a>
-  </footer>
-  <script src="youtube-playlists.js?v=20260924-1" defer></script>
+  <footer><div class="footer-brand">CUERVOS <span>JR</span></div><p>Estadísticas construidas con los registros del equipo.</p><p id="footer-update"></p></footer>
+  <script src="youtube-playlists.js?v=20260924-1" defer></script><script src="app.js?v=20261117-1" defer></script>
 </body>
 </html>

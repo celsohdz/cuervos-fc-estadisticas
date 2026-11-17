@@ -14,6 +14,23 @@
   --shadow: 0 24px 70px rgba(11, 12, 16, .12);
 }
 
+.jr-master-page {
+  --red: #c6922e;
+  --red-dark: #8d6118;
+}
+.jr-master-page .bar-loss { background: #d7263d; }
+.jr-master-page .hero {
+  background:
+    radial-gradient(circle at 80% 25%, rgba(198,146,46,.3), transparent 27%),
+    linear-gradient(135deg, #090b10 0%, #121722 66%, #090b10 100%);
+}
+.jr-master-page .schedule-feature { background: linear-gradient(135deg, #c6922e 0%, #8d6118 100%); }
+.jr-master-page .schedule-feature-label { color: #fff0c7; }
+.jr-master-page .schedule-feature-label strong { color: #8d6118; }
+.jr-master-page .schedule-feature h3 span { color: #ffe3a1; }
+.jr-master-page .schedule-feature-copy > p,
+.jr-master-page .schedule-feature-duty span { color: #fff2d1; }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {

@@ -27,6 +27,13 @@ const teamLogos = {
   "Regios": "regios.png",
 };
 
+const teamName = (data) => data.shortTeamName || data.team || "Cuervos";
+const teamLogo = (data, team) => {
+  if (data.teamLogos?.[team]) return data.teamLogos[team];
+  const file = teamLogos[team];
+  return file ? `assets/team-logos/${file}` : null;
+};
+
 function monterreyWallTime(now = new Date()) {
   const parts = Object.fromEntries(new Intl.DateTimeFormat("en-US", {
     timeZone: "America/Monterrey",
@@ -81,19 +88,19 @@ function renderUpcoming(data) {
   const upcoming = getUpcomingWeekMatches(data);
   const nextCard = document.querySelector("#next-match");
   if (!upcoming.length) {
-    nextCard.innerHTML = '<p class="empty-state">Próximo partido por confirmar.</p>';
+    nextCard.innerHTML = `<p class="empty-state">${data.seasonComplete ? "Temporada finalizada." : "Próximo partido por confirmar."}</p>`;
   } else {
     const multiple = upcoming.length > 1;
     nextCard.classList.toggle("has-multiple", multiple);
     nextCard.innerHTML = `
-      <div class="next-label"><span>${multiple ? "Próximos partidos" : "Próximo partido"}</span><span>${multiple ? `${upcoming.length} juegos` : `J${upcoming[0].matchday}`}</span></div>
+      <div class="next-label"><span>${multiple ? "Próximos partidos" : "Próximo partido"}</span><span>${multiple ? `${upcoming.length} juegos` : (upcoming[0].label || `J${upcoming[0].matchday}`)}</span></div>
       <div class="upcoming-list">
         ${upcoming.map((match) => {
           const isRescheduled = match.matchday === data.rescheduledMatch?.matchday && match.date === data.rescheduledMatch?.date;
           return `
             <article class="upcoming-game ${isRescheduled ? "is-rescheduled" : ""}">
               <div class="upcoming-heading"><span>${isRescheduled ? "Reprogramado" : "Partido"}</span><strong>J${match.matchday}</strong></div>
-              <div class="upcoming-rival"><span aria-hidden="true">⚽</span> Cuervos vs ${match.rival}</div>
+              <div class="upcoming-rival"><span aria-hidden="true">⚽</span> ${teamName(data)} vs ${match.rival}</div>
               <p class="upcoming-meta">${formatDate(match.date, { weekday: "long" })} · ${match.time} h</p>
               ${match.asador ? `<div class="upcoming-duty"><span>Asador</span><strong>${match.asador}</strong></div>` : ""}
             </article>
@@ -157,10 +164,10 @@ function renderStandings(data) {
     return;
   }
   document.querySelector("#standings-updated").textContent = `Corte: ${formatDate(standings.asOf)}`;
-  document.querySelector(".standings-table caption").textContent = `Clasificación de Liga Master ${data.currentSeason}`;
+  document.querySelector(".standings-table caption").textContent = `Clasificación de ${data.competition || "Liga Master"} ${data.currentSeason}`;
   document.querySelector("#standings-rows").innerHTML = standings.rows.map((row) => `
-    <tr class="${row.team === "Cuervos" ? "standings-cuervos" : ""}">
-      <th scope="row"><span class="standings-identity"><span class="standings-rank">${row.rank}</span><img class="standings-logo" src="assets/team-logos/${teamLogos[row.team]}" alt="" width="30" height="30" loading="lazy"><span class="standings-team">${row.team}</span></span></th>
+    <tr class="${row.team === teamName(data) ? "standings-cuervos" : ""}">
+      <th scope="row"><span class="standings-identity"><span class="standings-rank">${row.rank}</span>${teamLogo(data, row.team) ? `<img class="standings-logo" src="${teamLogo(data, row.team)}" alt="" width="30" height="30" loading="lazy">` : ""}<span class="standings-team">${row.team}</span></span></th>
       <td>${row.played}</td><td>${row.won}</td><td>${row.drawn}</td><td>${row.lost}</td>
       <td class="standings-points">${row.points}</td><td>${row.gd}</td>
       <td>${row.gf}</td><td>${row.ga}</td><td>${row.fp}</td>
@@ -182,25 +189,24 @@ function renderSchedule(data) {
   const next = getNextMatch(data);
 
   if (!next) {
-    feature.innerHTML = '<p class="empty-state">Próximo partido por confirmar.</p>';
+    feature.innerHTML = `<p class="empty-state">${data.seasonComplete ? "Temporada finalizada." : "Próximo partido por confirmar."}</p>`;
   } else {
-    const logo = teamLogos[next.rival];
+    const logo = teamLogo(data, next.rival);
+    const ownLogo = data.teamLogo || "assets/logo-cuervos.png";
     feature.innerHTML = `
       <div class="schedule-feature-copy">
-        <div class="schedule-feature-label"><span>Próximo partido</span><strong>J${next.matchday}</strong></div>
-        <h3>Cuervos <span>vs</span> ${next.rival}</h3>
+        <div class="schedule-feature-label"><span>Próximo partido</span><strong>${next.label || `J${next.matchday}`}</strong></div>
+        <h3>${teamName(data)} <span>vs</span> ${next.rival}</h3>
         <p>${formatDate(next.date, { weekday: "long" })} · ${next.time} h</p>
-        ${next.service || next.asador ? `
-          <div class="schedule-feature-duty">
-            <span>${next.service ? "🍺 Servicio" : "🔥 Asador"}</span>
-            <strong>${next.service ? `${next.service} · Sin asador` : next.asador}</strong>
-          </div>
-        ` : ""}
+        <div class="schedule-feature-duty">
+          <span>${next.service ? "🍺 Servicio" : "🔥 Asador"}</span>
+          <strong>${next.service ? `${next.service} · Sin asador` : next.asador}</strong>
+        </div>
       </div>
       <div class="schedule-versus" aria-hidden="true">
-        <img src="assets/logo-cuervos.png" alt="">
+        <img src="${ownLogo}" alt="">
         <span>VS</span>
-        ${logo ? `<img src="assets/team-logos/${logo}" alt="">` : '<span class="schedule-fallback">⚽</span>'}
+        ${logo ? `<img src="${logo}" alt="">` : '<span class="schedule-fallback">⚽</span>'}
       </div>
     `;
   }
@@ -211,15 +217,15 @@ function renderSchedule(data) {
       const match = matchForFixture(data, fixture);
       const isNext = next && fixture.matchday === next.matchday && fixture.date === next.date;
       const isRescheduled = fixture.matchday === data.rescheduledMatch?.matchday && fixture.date === data.rescheduledMatch?.date;
-      const logo = teamLogos[fixture.rival];
+      const logo = teamLogo(data, fixture.rival);
       const status = match ? "Final" : isRescheduled ? "Reprogramado" : isNext ? "Siguiente" : "Programado";
       return `
         <article class="schedule-game ${match ? "is-finished" : ""} ${isNext ? "is-next" : ""}">
           <div class="schedule-round">
-            <span>Jornada</span><strong>${fixture.matchday}</strong>
+            <span>${fixture.stage || "Jornada"}</span><strong>${fixture.label || fixture.matchday}</strong>
           </div>
           <div class="schedule-opponent">
-            ${logo ? `<img src="assets/team-logos/${logo}" alt="">` : '<span class="schedule-mini-fallback">⚽</span>'}
+            ${logo ? `<img src="${logo}" alt="">` : '<span class="schedule-mini-fallback">⚽</span>'}
             <div><small>vs</small><strong>${fixture.rival}</strong></div>
           </div>
           <div class="schedule-when">
@@ -231,7 +237,7 @@ function renderSchedule(data) {
               <span>${fixture.service ? "🍺 Servicio" : "🔥 Asador"}</span>
               <strong>${fixture.service ? `${fixture.service} · Sin asador` : fixture.asador}</strong>
             </div>
-          ` : '<div class="schedule-duty" aria-hidden="true"></div>'}
+          ` : '<div class="schedule-duty schedule-duty-empty"><span>Club de Lago</span></div>'}
           <div class="schedule-status status-${status.toLowerCase()}">
             ${match ? `<strong>${match.gf}–${match.ga}</strong><span>${status}</span>` : `<span>${status}</span>`}
           </div>
@@ -247,7 +253,7 @@ function renderPlayers(data) {
     <span class="leader-badge">● Líder goleador</span>
     <div class="leader-number">${top.goals}</div>
     <h3 class="leader-name">${top.player}</h3>
-    <p class="leader-detail">${top.assists} asistencia${top.assists === 1 ? "" : "s"} · ${top.played} PJ</p>
+    <p class="leader-detail">${data.trackAssists === false ? `${top.played} PJ` : `${top.assists} asistencia${top.assists === 1 ? "" : "s"} · ${top.played} PJ`}</p>
   ` : '<p class="empty-state">Sin estadísticas individuales.</p>';
 
   document.querySelector("#current-player-rows").innerHTML = players.map((player) => `
@@ -255,7 +261,7 @@ function renderPlayers(data) {
       <td><span class="player-name">${player.player}</span>${player.position === "Portero" ? '<span class="position-badge">Portero</span>' : ""}</td>
       <td>${player.played}</td>
       <td><strong>${player.goals}</strong></td>
-      <td>${player.assists}</td>
+      ${data.trackAssists === false ? "" : `<td>${player.assists}</td>`}
       <td class="discipline-cell"><span class="card-icon card-yellow" aria-hidden="true"></span>${safeNumber(player.yellowCards)}</td>
       <td class="discipline-cell"><span class="card-icon card-red" aria-hidden="true"></span>${safeNumber(player.redCards)}</td>
     </tr>
@@ -353,7 +359,8 @@ function initNavigation() {
 async function init() {
   initNavigation();
   try {
-    const response = await fetch("data/stats.json", { cache: "no-store" });
+    const statsUrl = document.body.dataset.statsUrl || "data/stats.json";
+    const response = await fetch(statsUrl, { cache: "no-store" });
     if (!response.ok) throw new Error("No se pudieron cargar los datos");
     const data = await response.json();
     state.data = data;
