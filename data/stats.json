@@ -1,24 +1,24 @@
 {
   "team": "Cuervos FC",
   "currentSeason": "Clausura 2026",
-  "updatedAt": "2026-11-17",
+  "updatedAt": "2026-11-18",
   "standings": {
-    "asOf": "2026-11-17",
+    "asOf": "2026-11-18",
     "phase": "Fase regular",
     "rows": [
       {"rank": 1, "team": "Caras Sucias", "played": 12, "won": 11, "drawn": 0, "lost": 1, "points": 33, "gd": 78, "gf": 91, "ga": 13, "fp": 30},
-      {"rank": 2, "team": "Piratas", "played": 11, "won": 9, "drawn": 0, "lost": 2, "points": 27, "gd": 34, "gf": 61, "ga": 27, "fp": 35},
+      {"rank": 2, "team": "Piratas", "played": 12, "won": 10, "drawn": 0, "lost": 2, "points": 30, "gd": 48, "gf": 77, "ga": 29, "fp": 35},
       {"rank": 3, "team": "Brodys FC", "played": 11, "won": 8, "drawn": 0, "lost": 3, "points": 24, "gd": 28, "gf": 64, "ga": 36, "fp": 20},
       {"rank": 4, "team": "La Grilla", "played": 12, "won": 7, "drawn": 1, "lost": 4, "points": 22, "gd": 20, "gf": 52, "ga": 32, "fp": 15},
       {"rank": 5, "team": "Cuervos", "played": 11, "won": 7, "drawn": 0, "lost": 4, "points": 21, "gd": 10, "gf": 51, "ga": 41, "fp": 20},
       {"rank": 6, "team": "Roma", "played": 12, "won": 7, "drawn": 0, "lost": 5, "points": 21, "gd": -4, "gf": 43, "ga": 47, "fp": 0},
       {"rank": 7, "team": "Forza", "played": 11, "won": 6, "drawn": 1, "lost": 4, "points": 19, "gd": -1, "gf": 52, "ga": 53, "fp": 45},
-      {"rank": 8, "team": "Gunners", "played": 11, "won": 6, "drawn": 0, "lost": 5, "points": 18, "gd": -11, "gf": 39, "ga": 50, "fp": 10},
+      {"rank": 8, "team": "Gunners", "played": 12, "won": 6, "drawn": 0, "lost": 6, "points": 18, "gd": -15, "gf": 40, "ga": 55, "fp": 10},
       {"rank": 9, "team": "Boca Jr", "played": 12, "won": 5, "drawn": 0, "lost": 7, "points": 15, "gd": 1, "gf": 60, "ga": 59, "fp": 30},
-      {"rank": 10, "team": "Capos", "played": 11, "won": 3, "drawn": 0, "lost": 8, "points": 9, "gd": -2, "gf": 39, "ga": 41, "fp": 35},
-      {"rank": 11, "team": "Compadres", "played": 11, "won": 3, "drawn": 0, "lost": 8, "points": 9, "gd": -38, "gf": 24, "ga": 62, "fp": 0},
+      {"rank": 10, "team": "Compadres", "played": 12, "won": 4, "drawn": 0, "lost": 8, "points": 12, "gd": -34, "gf": 29, "ga": 63, "fp": 0},
+      {"rank": 11, "team": "Capos", "played": 11, "won": 3, "drawn": 0, "lost": 8, "points": 9, "gd": -2, "gf": 39, "ga": 41, "fp": 35},
       {"rank": 12, "team": "Regios", "played": 12, "won": 1, "drawn": 0, "lost": 11, "points": 3, "gd": -39, "gf": 27, "ga": 66, "fp": 20},
-      {"rank": 13, "team": "Chamucos", "played": 11, "won": 0, "drawn": 0, "lost": 11, "points": 0, "gd": -76, "gf": 18, "ga": 94, "fp": 0}
+      {"rank": 13, "team": "Chamucos", "played": 12, "won": 0, "drawn": 0, "lost": 12, "points": 0, "gd": -90, "gf": 20, "ga": 110, "fp": 0}
     ]
   },
   "current": {
