@@ -99,7 +99,7 @@ function renderUpcoming(data) {
           const isRescheduled = match.matchday === data.rescheduledMatch?.matchday && match.date === data.rescheduledMatch?.date;
           return `
             <article class="upcoming-game ${isRescheduled ? "is-rescheduled" : ""}">
-              <div class="upcoming-heading"><span>${isRescheduled ? "Reprogramado" : "Partido"}</span><strong>J${match.matchday}</strong></div>
+              <div class="upcoming-heading"><span>${isRescheduled ? "Reprogramado" : "Partido"}</span><strong>${match.label || `J${match.matchday}`}</strong></div>
               <div class="upcoming-rival"><span aria-hidden="true">⚽</span> ${teamName(data)} vs ${match.rival}</div>
               <p class="upcoming-meta">${formatDate(match.date, { weekday: "long" })} · ${match.time} h</p>
               ${match.asador ? `<div class="upcoming-duty"><span>Asador</span><strong>${match.asador}</strong></div>` : ""}
